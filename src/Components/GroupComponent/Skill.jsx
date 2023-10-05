@@ -7,7 +7,7 @@ const Skill = ({
 
 
     return (
-        <section id="page_Skills">
+        <section id="page_Skills" className="hide">
             <div className="container">
                 <div className='skill-header'>
                     <div className='head-line'></div>

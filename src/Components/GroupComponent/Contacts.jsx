@@ -46,12 +46,12 @@ const Contact = () => {
     };
 
     return (
-        <section className="footer_contact" id="page_Contacts">
+        <section className="footer_contact hide" id="page_Contacts">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-12 my-3">
                         <div className="map_child" id="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d252665.23881224444!2d77.56587716884574!3d8.313296338094117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695702263229!5m2!1sen!2sin" width="350" height="350" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d252665.23881224444!2d77.56587716884574!3d8.313296338094117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695702263229!5m2!1sen!2sin" className="map_view" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <div className="col-lg-8">

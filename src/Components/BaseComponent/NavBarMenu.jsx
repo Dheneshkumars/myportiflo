@@ -31,13 +31,13 @@ const NavMenu = ({
     return (
         windowDimensions.width < 768 &&
         <>
-            <div className="menu-parent d-md-none">
+            <div className="menu-parent px-2 d-md-none">
                 <div className="menu-row">
                     {
                         Array.isArray(menuData) && menuData.length > 0 && menuData.map((data, i) => {
                             return (
 
-                                <div className="col-sm-2 menu-content" key={i}>
+                                <div className="col-sm-2" key={i}>
                                     <SvgIcon
                                         iconType={data}
                                         onClickHandler={(e) => handleClickHandler(data)}

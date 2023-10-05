@@ -16,7 +16,7 @@ class AppComponent extends PureComponent {
         super(props);
         this.state = {
             hasError: false,
-            activePage:""
+            activePage: ""
         };
     }
 
@@ -50,22 +50,37 @@ class AppComponent extends PureComponent {
                     const sectionTop = section.offsetTop;
                     const sectionBottom = sectionTop + section.offsetHeight;
                     const isSectionActive = window.scrollY >= sectionTop - customOffset && window.scrollY < sectionBottom - customOffset;
-               
+
                     if (isSectionActive) {
-                      let activePageIndex = id.indexOf('_');
-                      let activePage = id.substring(activePageIndex + 1);
-                      this.props.activePage(activePage);
+                        let activePageIndex = id.indexOf('_');
+                        let activePage = id.substring(activePageIndex + 1);
+                        this.props.activePage(activePage);
                     }
-                  }
+                }
             }
         }
-    
+
+        const elementsToObserve = document.querySelectorAll('.hide')
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show')
+                }
+                else {
+                    entry.target.classList.remove('show')
+                }
+            })
+        })
+        elementsToObserve.forEach((element) => {
+            observer.observe(element);
+        });
+
         if (container.length > 0) {
             document.addEventListener('scroll', onScrollHandle);
         }
     }
-    
-    
+
+
 
     render() {
         const portifloDataArray = this.props && this.props.schema && Object.keys(this.props.schema);
@@ -148,14 +163,14 @@ class AppComponent extends PureComponent {
     }
 }
 
-const mapDispatchToProps = (dispatch)=>{
-    return{
-        activePage : (data)=>{
+const mapDispatchToProps = (dispatch) => {
+    return {
+        activePage: (data) => {
             dispatch(activePageInfo(data));
         }
     }
 }
 
-export default connect(null,mapDispatchToProps)(AppComponent)
+export default connect(null, mapDispatchToProps)(AppComponent)
 
 

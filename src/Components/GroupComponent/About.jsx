@@ -3,7 +3,7 @@ import about_image from '../../images/About_Dhenesh.webp';
 
 const About = () => {
     return (
-        <section id='page_About'>
+        <section id='page_About' className='hide'>
             <div className="container py-4">
                 <div className="about-parent row">
                     <div className="about-child1 col-lg-4">

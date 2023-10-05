@@ -1,21 +1,12 @@
-import SvgIcon from "../BaseComponent/SvgIcons";
+import flaight from '../../images/flaight.png';
 import boyImg from "../../images/home.webp"
 
 const Home = () => {
 
     return (
-        <section id='page_Home'>
+        <section id='page_Home' className="hide">
             <div className="bird_one bird">
-                <SvgIcon
-                    iconType={"bird"}
-                    className="text-success"
-                />
-            </div>
-            <div className="bird_two bird">
-                <SvgIcon
-                    iconType={"bird"}
-                    className="text-success"
-                />
+                <img src={flaight} alt="flaight" width={100} />
             </div>
             <div className="container">
                 <div className="row">
@@ -32,6 +23,7 @@ const Home = () => {
                                     <li><span>Freelancer</span></li>
                                 </ul>
                             </div>
+                            <p>I am a professional Junior front end web developer and software developer.</p>
                         </div>
                     </div>
                 </div>

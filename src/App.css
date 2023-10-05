@@ -288,27 +288,12 @@ header {
 
 /* education  */
 
-.scroll-animation {
-    animation: slideIn 2s ease-in;
-}
-
 .education_name {
     font-weight: 900;
     font-size: 23px;
     color: #333;
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 .timeline {
     max-width: 800px;
@@ -399,12 +384,8 @@ header {
 .menu-row {
     display: flex !important;
     align-items: center;
-    justify-content: center;
-    padding: 10px 5px;
-}
-
-.menu-content {
-    padding: 10px 15px;
+    justify-content: space-between;
+    padding: 10px 1px;
 }
 
 /* circle bar */
@@ -433,4 +414,19 @@ header {
     height: 100%;
     background-color: green;
     transition: width 5s ease-in-out;
+}
+.map_view{
+    width: 100%;
+    height: 200px;
+}
+.hide{
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+    transform: translate(-100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
 }

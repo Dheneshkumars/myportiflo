@@ -2,7 +2,7 @@ import experince_img from '../../images/experience.webp';
 
 const Experince = () => {
     return (
-        <section className='experience_body' id='page_Experience'>
+        <section className='experience_body hide' id='page_Experience'>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-7">

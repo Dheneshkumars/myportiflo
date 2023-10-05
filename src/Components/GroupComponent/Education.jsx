@@ -10,7 +10,7 @@ const Education = ({
     const activePage = selector && selector?.activepage;
 
     return (
-        <section id="page_Education">
+        <section id="page_Education" className="hide">
             <div className="container">
                 <div className="education_header">
                     <div className="head-line"></div>
