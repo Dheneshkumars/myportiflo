@@ -142,7 +142,7 @@ class AppComponent extends PureComponent {
 
             return components;
         } else {
-            return null
+            return <h3>hii</h3>
         }
 
     }
