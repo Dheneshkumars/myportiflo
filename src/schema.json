@@ -1,0 +1,143 @@
+{
+    "id": "Dhenesh_kumar",
+    "layout_id": 303,
+    "name": "Dhenensh Kuamar",
+    "header": {
+        "type": "header",
+        "logo": {
+            "svg": ""
+        },
+        "menus": [
+            "Home",
+            "About",
+            "Skills",
+            "Education",
+            "Experience",
+            "Contacts"
+        ]
+    },
+    "home":{
+        "type":"home"
+    },
+    "about": {
+        "type": "about",
+        "content": {
+            "desciption": "I am a bachelor of engineer and junior web developer. I have one and half year's experience in IT Field. I am a most trained person in web Developing.",
+            "dob": "23 Dec-1999",
+            "age": 24,
+            "phone_number": 9344368889,
+            "degree": "Bachelor of Engineering[B.E]",
+            "city": "Kanyakumari,TamilNadu",
+            "Email": "dheneshkumar111@gmail.com",
+            "freelance": true
+        }
+    },
+    "skill": {
+        "type":"skill",
+        "content":[
+            {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"HTML",
+                "percent":95
+            },
+            {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"CSS",
+                "percent":83
+            },
+            {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"BOOTSTRAP",
+                "percent":90
+            },
+            {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"SASS",
+                "percent":80
+            },
+            {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"JAVASCRIPT",
+                "percent":75
+            },
+            {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"JQUERY",
+                "percent":82
+            },
+            {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"REACT",
+                "percent":87
+            },
+            {
+                "type":"primary",
+                "side":"back_end",
+                "skill":"Node JS",
+                "percent":68
+            },
+            {
+                "type":"primary",
+                "side":"back_end",
+                "skill":"Express JS",
+                "percent":63
+            },
+            {
+                "type":"secondary",
+                "skill":"PYTHON",
+                "percent":54
+            },
+            {
+                "type":"secondary",
+                "skill":"C++",
+                "percent":60
+            }
+        ]
+    },
+    "education": {
+        "type":"education",
+        "content":[
+            {
+                "university":"Anna University",
+                "Name":"Vins Christian College Of Engineering",
+                "period":"Jun-2017 to Mar-2020",
+                "mark_obtained": "6.8 cgpa",
+                "place": "Nagercoil - 629003",
+                "type":"Bachelor of Electrical Engineering"
+            },
+            {
+                "type":"Diploma in Electrical Engineering",
+                "university":"TamilNadu Technical Department",
+                "Name":"Government polytechnic college",
+                "period":"Jun-2014 to Mar-2017",
+                "mark_obtained": "75%",
+                "place":"Nagercoil - 629001"
+            },
+            {
+                "type":"Secondary School",
+                "university":"TamilNadu State Board",
+                "Name":"Government higher secondary school",
+                "period":"Jun-2013 to april-2014",
+                "mark_obtained": "78%",
+                "place":"Eathamozhi - 629501"
+            }
+        ]
+    },
+    "experience": {},
+    "contact": {},
+    "menu":[
+        "Home",
+        "About",
+        "Skills",
+        "Education",
+        "Experience",
+        "Contacts"
+    ]
+}

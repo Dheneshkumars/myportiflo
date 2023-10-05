@@ -1,0 +1,436 @@
+/* commmon */
+*,
+::after,
+::before {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Graphik, sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a,
+a {
+    text-decoration: none;
+}
+
+svg {
+    margin-right: 10px;
+}
+
+.higlight {
+    color: #ff0000 !important;
+}
+
+header {
+    color: #fff;
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    z-index: 1;
+}
+
+.heart {
+    color: #ff0000;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.skill-header,
+.education_header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skill-header h3,
+.education_header h3 {
+    margin: 0px 10px;
+    font-weight: 800 !important;
+}
+
+.head-line {
+    border: 5px solid green;
+    width: 480px;
+    animation: 3s infinite alternate floating;
+    border-radius: 5px;
+}
+
+.under_line {
+    width: 80px;
+    border: 2px solid black;
+}
+
+.check_tick {
+    color: #4CAF50;
+}
+
+.skill-body,
+.education_body,
+.experience_body {
+    margin: 50px 0px !important;
+}
+
+.section_heading {
+    font-weight: 800;
+    font-family: sans-serif;
+    margin: 10px 0px;
+}
+
+/* end : common */
+
+/* header */
+.nav-menu {
+    display: none;
+
+    @media (min-width:768px) {
+        display: block !important;
+    }
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 90%;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.text-orange {
+    color: #FFA500;
+}
+
+.text-sky {
+    color: #71BCE1;
+}
+
+/* home */
+#page_Home {
+    height: 100vh;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center !important;
+    @media (min-width:768px) {
+        
+    }
+}
+.boy_img{
+    width: 250px;
+    height: 250px;
+}
+
+.home_content {
+    margin-bottom: 40px;
+}
+
+/* Fly animation */
+.bird {
+    position: absolute;
+    display: none;
+    @media (min-width:768px) {
+        display: block;
+    }
+}
+.bird_one{
+    top: 6%;
+    left: -10%;
+    animation: birdMove 15s linear infinite ;
+    @media (min-width:768px) {
+        top: 16%;
+    }
+}
+.bird_two{
+    top: 8%;
+    left: -10%;
+    animation-delay: 3s !important;
+    animation: birdMove 15s linear infinite ;
+    @media (min-width:768px) {
+        animation-delay: 1s !important;
+        top: 18%;
+    }
+}
+@keyframes birdMove {
+    0%{
+        left: -10%;
+    }
+    100%{
+        left: 110%;
+    }
+}
+
+
+.wrapper {
+    display: inline-flex;
+}
+
+.dyamic_text li {
+    position: relative;
+    animation: slide 2.5s steps(10) infinite;
+}
+
+.wrapper .dyamic_text {
+    line-height: 38px;
+    overflow: hidden;
+    height: 38px;
+}
+
+@keyframes slide {
+    100% {
+        top: -43px;
+    }
+}
+
+.dyamic_text li span {
+    color: #fc606d;
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (min-width:768px) {
+        font-size: 30px;
+    }
+}
+
+/* about page */
+.about_image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+    @media (min-width:768px) {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.about-child1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-list {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.about-ul {
+    padding: 0% !important;
+}
+
+/* skills */
+.skill_head {
+    font-size: 18px;
+    font-weight: 800;
+    color: skyblue;
+    margin-bottom: 20px;
+    font-family: 'Font Name', sans-serif;
+}
+
+.skill_head2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: orangered;
+    margin-bottom: 20px;
+    font-family: 'Font Name', sans-serif;
+}
+
+.skill_primary {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Font Name', sans-serif;
+    padding-left: 10px;
+}
+
+
+/* education  */
+
+.scroll-animation {
+    animation: slideIn 2s ease-in;
+}
+
+.education_name {
+    font-weight: 900;
+    font-size: 23px;
+    color: #333;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.timeline-item {
+    border-left: 2px solid #007BFF;
+    margin: 0 0 20px;
+    padding: 20px 40px;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-content {
+    padding-left: 30px;
+}
+
+.date {
+    font-weight: bold;
+}
+
+
+/* experience */
+.experience_img {
+    width: 100%;
+    height: 250px !important;
+    background-position: center;
+
+    @media (min-width:992px) {
+        width: 400px;
+        height: 300px !important;
+    }
+}
+
+/* footer */
+.footer_contact {
+    background-color: black;
+    color: #fff;
+    margin-top: 30px;
+    padding: 15px 0px;
+
+    @media (min-width:768px) {
+        padding: 40px 50px;
+    }
+}
+
+.contact_form {
+    background-color: #fff;
+}
+
+.map_child {
+    margin: 20px 0px;
+}
+
+.submitbtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    width: 25%;
+}
+
+/* menu */
+.menu-parent {
+    background-color: #00008b;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+}
+
+.menu-row {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+.menu-content {
+    padding: 10px 15px;
+}
+
+/* circle bar */
+
+.skill-bar {
+    padding-bottom: 20px !important;
+}
+
+.skill-fill {
+    color: #ccc;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.skill-level {
+    width: 100%;
+    background-color: #ccc;
+    height: 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill_animation {
+    width: 0;
+    height: 100%;
+    background-color: green;
+    transition: width 5s ease-in-out;
+}
