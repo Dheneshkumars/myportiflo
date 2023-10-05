@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/myportiflo/static/css/main.d3f2021e.css",
+    "main.js": "/myportiflo/static/js/main.fc20b5b7.js",
+    "static/media/home.webp": "/myportiflo/static/media/home.ca5f050dd037a181cc71.webp",
+    "static/media/experience.webp": "/myportiflo/static/media/experience.b2e4c7c2577a6627697b.webp",
+    "static/media/About_Dhenesh.webp": "/myportiflo/static/media/About_Dhenesh.21ac686306fa244b548f.webp",
+    "index.html": "/myportiflo/index.html",
+    "main.d3f2021e.css.map": "/myportiflo/static/css/main.d3f2021e.css.map",
+    "main.fc20b5b7.js.map": "/myportiflo/static/js/main.fc20b5b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3f2021e.css",
+    "static/js/main.fc20b5b7.js"
+  ]
+}
