@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/myportiflo/static/css/main.2e8b1768.css",
-    "main.js": "/myportiflo/static/js/main.012bc28e.js",
+    "main.css": "/myportiflo/static/css/main.211c4f8a.css",
+    "main.js": "/myportiflo/static/js/main.fb2a4a88.js",
     "static/media/flaight.png": "/myportiflo/static/media/flaight.dbdffcf7fb039b9dc47b.png",
     "static/media/home.webp": "/myportiflo/static/media/home.ca5f050dd037a181cc71.webp",
     "static/media/experience.webp": "/myportiflo/static/media/experience.b2e4c7c2577a6627697b.webp",
     "static/media/About_Dhenesh.webp": "/myportiflo/static/media/About_Dhenesh.21ac686306fa244b548f.webp",
     "index.html": "/myportiflo/index.html",
-    "main.2e8b1768.css.map": "/myportiflo/static/css/main.2e8b1768.css.map",
-    "main.012bc28e.js.map": "/myportiflo/static/js/main.012bc28e.js.map"
+    "main.211c4f8a.css.map": "/myportiflo/static/css/main.211c4f8a.css.map",
+    "main.fb2a4a88.js.map": "/myportiflo/static/js/main.fb2a4a88.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e8b1768.css",
-    "static/js/main.012bc28e.js"
+    "static/css/main.211c4f8a.css",
+    "static/js/main.fb2a4a88.js"
   ]
 }
