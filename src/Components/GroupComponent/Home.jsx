@@ -8,12 +8,15 @@ const Home = () => {
             <div className="bird_one bird">
                 <img src={flaight} alt="flaight" width={100} />
             </div>
+            <div className="bird_two bird">
+                <img src={flaight} alt="flaight" width={100} />
+            </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-5 home_img">
                         <img src={boyImg} className="boy_img" alt="boy_img" />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-7">
                         <div className="home_content">
                             <h3>Hi, It's Me,</h3>
                             <div className="wrapper">

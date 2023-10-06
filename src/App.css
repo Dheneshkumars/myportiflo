@@ -147,14 +147,12 @@ header {
 
 /* home */
 #page_Home {
-    height: 100vh;
-    margin-bottom: 10px;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center !important;
     @media (min-width:768px) {
-        
+        height: 100vh;
     }
 }
 .boy_img{
@@ -184,8 +182,8 @@ header {
 }
 .bird_two{
     top: 8%;
-    left: -10%;
-    animation-delay: 3s !important;
+    left: 0%;
+    animation-delay: 7s !important;
     animation: birdMove 15s linear infinite ;
     @media (min-width:768px) {
         animation-delay: 1s !important;
@@ -230,6 +228,15 @@ header {
 
     @media (min-width:768px) {
         font-size: 30px;
+    }
+}
+.home_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px !important;
+    @media (min-width:768px) {
+        display: block;
     }
 }
 
