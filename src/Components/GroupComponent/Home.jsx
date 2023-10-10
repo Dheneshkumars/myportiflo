@@ -1,5 +1,5 @@
 import flaight from '../../images/flaight.png';
-import boyImg from "../../images/home.webp"
+import boyImg from "../../images/boy.png"
 import SvgIcon from '../BaseComponent/SvgIcons';
 
 const Home = () => {
