@@ -13,9 +13,7 @@ const Education = ({
         <section id="page_Education" className="hide">
             <div className="container">
                 <div className="education_header">
-                    <div className="head-line"></div>
                     <h3>Education</h3>
-                    <div className="head-line"></div>
                 </div>
                 <div className="timeline">
                     {

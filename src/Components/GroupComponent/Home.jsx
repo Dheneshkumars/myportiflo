@@ -1,14 +1,12 @@
 import flaight from '../../images/flaight.png';
 import boyImg from "../../images/home.webp"
+import SvgIcon from '../BaseComponent/SvgIcons';
 
 const Home = () => {
 
     return (
         <section id='page_Home' className="hide">
             <div className="bird_one bird">
-                <img src={flaight} alt="flaight" width={100} />
-            </div>
-            <div className="bird_two bird">
                 <img src={flaight} alt="flaight" width={100} />
             </div>
             <div className="container">
@@ -27,6 +25,20 @@ const Home = () => {
                                 </ul>
                             </div>
                             <p>I am a professional Junior front end web developer and software developer.</p>
+                            <span>
+                                <a href="https://github.com/Dheneshkumars/myportiflo" target="_blank" rel="noopener noreferrer">
+                                    <SvgIcon
+                                        iconType={'git'}
+                                    />
+                                </a>
+                            </span>
+                            <span>
+                                <a href="https://www.linkedin.com/in/dhenesh-s-626b68291/" target="_blank" rel="noopener noreferrer">
+                                    <SvgIcon
+                                        iconType={'linkdin'}
+                                    />
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>

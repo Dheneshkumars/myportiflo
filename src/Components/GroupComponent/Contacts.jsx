@@ -26,8 +26,8 @@ const Contact = () => {
         setError(!isNotEmpty);
         const response = valid && isNotEmpty ? await SendMail(emailData) : null;
         if (response !== null && response !== undefined) {
-            if (response?.data && response.data.send) {
-                swal('Success!', `${response.data.message}`, 'success');
+            if (response && response.send) {
+                swal('Success!', `${response.message}`, 'success');
                 setEmailData({
                     name: "",
                     email: "",
@@ -35,7 +35,7 @@ const Contact = () => {
                 })
             }
             else {
-                swal("Oops!", `${response.data.message}`, "error");
+                swal("Oops!", `${response.message}`, "error");
                 setEmailData({
                     name: "",
                     email: "",

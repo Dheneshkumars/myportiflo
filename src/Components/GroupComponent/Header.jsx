@@ -4,7 +4,7 @@ import { scroller } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import SvgIcon from '../BaseComponent/SvgIcons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Header = (
     {
@@ -14,7 +14,7 @@ const Header = (
 
     const my_header = headerData && headerData.type === 'header' ? headerData?.menus : [];
     const dispatch = useDispatch();
-    const [color, setColor] = useState('white');
+    const [color, setColor] = useState('light');
     const selector = useSelector(state => state.pageReducer);
     const activeInfo = selector?.activepage;
     const handleOnclick = (e) => {
@@ -31,13 +31,13 @@ const Header = (
     const onColorChange = (e) => {
         const svgVal = e.target.getAttribute('value');
         const body = document.body;
-        if(svgVal === 'white'){
+        if(svgVal === 'light'){
             body.style.backgroundColor = 'black';
             setColor('dark');
         }
         else{
             body.style.backgroundColor = 'white';
-            setColor('white');
+            setColor('light');
         }
     }
     return (
@@ -55,7 +55,7 @@ const Header = (
                             <span className="text-sky">H</span>
                         </a>
                         <SvgIcon
-                            iconType={'dark'}
+                            iconType={`${color =='dark' ? 'light' : 'dark'}`}
                             className={'text-dark d-md-none'}
                             onClickHandler={(e) => onColorChange(e)}
                             value={color}

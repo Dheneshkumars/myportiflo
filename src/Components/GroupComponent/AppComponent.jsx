@@ -16,8 +16,10 @@ class AppComponent extends PureComponent {
         super(props);
         this.state = {
             hasError: false,
-            activePage: ""
+            activePage: "",
         };
+        this.elementsToObserve = null;
+        this.observer = null;
     }
 
     static getDerivedStateFromError(error) {
@@ -38,18 +40,21 @@ class AppComponent extends PureComponent {
                 delay: 0,
                 smooth: true,
                 offset: -150,
-            })
+            });
         }
+
         const container = document.getElementsByTagName('section');
+        const customOffset = 300;
 
         const onScrollHandle = () => {
-            let customOffset = 90;
             for (let section of container) {
                 const id = section && section.id;
                 if (id) {
                     const sectionTop = section.offsetTop;
                     const sectionBottom = sectionTop + section.offsetHeight;
-                    const isSectionActive = window.scrollY >= sectionTop - customOffset && window.scrollY < sectionBottom - customOffset;
+                    const isSectionActive =
+                        window.scrollY > sectionTop - customOffset &&
+                        window.scrollY < sectionBottom - customOffset;
 
                     if (isSectionActive) {
                         let activePageIndex = id.indexOf('_');
@@ -58,26 +63,31 @@ class AppComponent extends PureComponent {
                     }
                 }
             }
-        }
-
-        const elementsToObserve = document.querySelectorAll('.hide')
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show')
-                }
-                else {
-                    entry.target.classList.remove('show')
-                }
-            })
-        })
-        elementsToObserve.forEach((element) => {
-            observer.observe(element);
-        });
+        };
 
         if (container.length > 0) {
             document.addEventListener('scroll', onScrollHandle);
         }
+        //  scroll animation
+        this.elementsToObserve = document.querySelectorAll('.hide');
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    this.observer.unobserve(entry.target);
+                }
+                else {
+                    entry.target.classList.remove('show');
+                }
+            })
+        },
+            {
+                // threshold: 1
+            }
+        )
+        this.elementsToObserve.forEach((element) => {
+            this.observer.observe(element);
+        });
     }
 
 

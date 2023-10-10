@@ -10,9 +10,7 @@ const Skill = ({
         <section id="page_Skills" className="hide">
             <div className="container">
                 <div className='skill-header'>
-                    <div className='head-line'></div>
                     <h3>Skills</h3>
-                    <div className='head-line'></div>
                 </div>
                 <div className="skill-body">
                     <div className="skill-item">
@@ -25,7 +23,7 @@ const Skill = ({
 
                                         if (data.type == "primary" && data.side == "front_end") {
                                             return (
-                                                <li className="col-md-4 col-lg-3 mb-5" key={index}>
+                                                <li className="col-md-4 mb-5 skill_card" key={index}>
                                                     <span>
                                                         <SvgIcon
                                                             iconType={data?.skill}
@@ -57,7 +55,7 @@ const Skill = ({
 
                                         if (data.type == "primary" && data.side == "back_end") {
                                             return (
-                                                <li className="col-md-4 col-lg-3 mb-5" key={index}>
+                                                <li className="col-md-4 mb-5 skill_card" key={index}>
                                                     <span>
                                                         <SvgIcon
                                                             iconType={data?.skill}
@@ -89,7 +87,7 @@ const Skill = ({
 
                                         if (data.type == "secondary") {
                                             return (
-                                                <li className="col-md-4 col-lg-3 mb-5" key={index}>
+                                                <li className="col-md-4 mb-5 skill_card" key={index}>
                                                     <span>
                                                         <SvgIcon
                                                             iconType={data?.skill}

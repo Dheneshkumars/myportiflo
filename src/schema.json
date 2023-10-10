@@ -130,7 +130,18 @@
             }
         ]
     },
-    "experience": {},
+    "experience": {
+        "type":"experience",
+        "content":[
+            "Collaborated with cross-functional teams to design, develop, and deploy responsive websites and web applications, ensuring optimal user experiences across various devices and browsers.",
+            "Assisted in the development and maintenance of company websites, regularly updating content and ensuring site security and performance.",
+            "Implemented modern front-end technologies such as HTML5, CSS3, and JavaScript to create interactive and visually appealing user interfaces.",
+            "Utilized popular front-end frameworks like Bootstrap and React to streamline development processes and enhance UI/UX.",
+            "Worked with back-end technologies including PHP, Node.js, and MySQL to build database-driven web applications and services.",
+            "Conducted thorough testing and debugging to identify and resolve issues, optimizing website performance and functionality.",
+            "Actively stayed updated with industry trends, best practices, and emerging technologies to enhance skills and bring fresh ideas to projects."
+        ]
+    },
     "contact": {},
     "menu":[
         "Home",

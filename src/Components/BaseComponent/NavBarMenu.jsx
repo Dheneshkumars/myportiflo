@@ -41,6 +41,7 @@ const NavMenu = ({
                                     <SvgIcon
                                         iconType={data}
                                         onClickHandler={(e) => handleClickHandler(data)}
+                                        className={"text-dark"}
                                     />
                                 </div>
                             )
