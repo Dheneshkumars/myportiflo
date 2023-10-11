@@ -8,9 +8,9 @@ const Experince = () => {
                 <div className="row">
                     <div className="col-lg-7">
                         <div className="my-2">
-                            <div className="d-flex align-items-center">
+                            <div className="d-md-flex align-items-center">
                                 <h6 className='exp_head m-0'>Machine Operator </h6>
-                                <span className='px-2'>[Sep 2020 - Jan 2021] :</span>
+                                <p className='px-2 mb-0'>[Sep 2020 - Jan 2021] :</p>
                             </div>
                             <strong>summary: </strong>
                             <p className='typing'>
@@ -18,9 +18,9 @@ const Experince = () => {
                             </p>
                         </div>
                         <div className="my-2">
-                            <div className="d-flex align-items-center">
+                            <div className="d-md-flex align-items-center">
                                 <h6 className='exp_head m-0'>Junior web Developer </h6>
-                                <span className='px-2'>[Oct 2021 - Jun 2023] :</span>
+                                <p className='px-2 mb-0'>[Oct 2021 - Jun 2023] :</p>
                             </div>
                             <strong>summary: </strong>
                             <p className='typing'>

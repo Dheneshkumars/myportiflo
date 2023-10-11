@@ -29,15 +29,22 @@ const Header = (
         }
     }
     const onColorChange = (e) => {
-        const svgVal = e.target.getAttribute('value');
         const body = document.body;
-        if(svgVal === 'light'){
+        const para = document.querySelectorAll('p');
+        console.log(para,"para");
+        if (color === 'light') {
             body.style.backgroundColor = 'black';
             setColor('dark');
+            para.forEach(data=>{
+                data.style.color = 'white';
+            })
         }
-        else{
+        else {
             body.style.backgroundColor = 'white';
             setColor('light');
+            para.forEach(data=>{
+                data.style.color = 'black';
+            })
         }
     }
     return (
@@ -46,16 +53,18 @@ const Header = (
                 <nav className="navbar navbar-expand-md navbar-light bg-light">
                     <div className="container navbar_sticky">
                         <a className="logo" href="#">
-                            <span className="text-danger">D</span>
-                            <span className="text-success">H</span>
-                            <span className="text-primary">E</span>
-                            <span className="text-warning">N</span>
-                            <span className="text-info">E</span>
-                            <span className="text-orange">S</span>
-                            <span className="text-sky">H</span>
+                            <p className='three_d m-0'>
+                                <span className="letter text-danger">D</span>
+                                <span className="letter text-success">H</span>
+                                <span className="letter text-primary">E</span>
+                                <span className="letter text-warning">N</span>
+                                <span className="letter text-info">E</span>
+                                <span className="letter text-orange">S</span>
+                                <span className="letter text-sky">H</span>
+                            </p>
                         </a>
                         <SvgIcon
-                            iconType={`${color =='dark' ? 'light' : 'dark'}`}
+                            iconType={`${color == 'dark' ? 'light' : 'dark'}`}
                             className={'text-dark d-md-none'}
                             onClickHandler={(e) => onColorChange(e)}
                             value={color}
