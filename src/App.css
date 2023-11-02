@@ -485,6 +485,7 @@ header {
 .menu_list{
     position: absolute;
     top: 100%;
+    left: 0%;
     background-color: #ccc;
     width: 100%;
 }
