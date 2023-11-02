@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SvgIcon from "./SvgIcons";
 import { scroller } from "react-scroll";
+import { useDispatch } from "react-redux";
+import { menuOpen } from "../../Reducers/pageReducer";
 
 
 
 const NavMenu = ({
     menuData
 }) => {
+
+    const dispatch = useDispatch();
     function getWindowDimensions() {
         const { innerWidth: width, innerHeight: height } = window;
         return {
@@ -26,28 +30,30 @@ const NavMenu = ({
                 offset: -150,
             })
         }
+        dispatch(menuOpen(false));
     }
 
     return (
         windowDimensions.width < 768 &&
         <>
-            <div className="menu-parent px-2 d-md-none">
-                <div className="menu-row">
+            <div className="d-md-none menu_list p-o">
+                <ul >
                     {
                         Array.isArray(menuData) && menuData.length > 0 && menuData.map((data, i) => {
                             return (
-
-                                <div className="col-sm-2" key={i}>
+                                <li className="text-dark d-flex align-items-center justify-content-center my-2" onClick={() => handleClickHandler(data)} key={i}>
+                                    <span>{data}</span>
                                     <SvgIcon
                                         iconType={data}
-                                        onClickHandler={(e) => handleClickHandler(data)}
-                                        className={"text-dark"}
+                                        className={"text-dark mx-2"}
                                     />
-                                </div>
+                                </li>
+
+
                             )
                         })
                     }
-                </div>
+                </ul>
             </div>
         </>
 

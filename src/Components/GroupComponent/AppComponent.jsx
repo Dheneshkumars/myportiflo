@@ -7,7 +7,6 @@ import Education from "../GroupComponent/Education";
 import Experince from "../GroupComponent/Experience";
 import Contact from "../GroupComponent/Contacts";
 import { scroller } from 'react-scroll';
-import NavMenu from "../BaseComponent/NavBarMenu";
 import { activePageInfo } from "../../Reducers/pageReducer";
 import { connect } from "react-redux";
 
@@ -88,6 +87,17 @@ class AppComponent extends PureComponent {
         this.elementsToObserve.forEach((element) => {
             this.observer.observe(element);
         });
+
+        const header = document.querySelector('header');
+        window.addEventListener("scroll", () => {
+            if (header) {
+                if (window.scrollY > 0) {
+                    header.style.backgroundColor = "#fff";
+                } else {
+                    header.style.backgroundColor = "transparent";
+                }
+            }
+        });
     }
 
 
@@ -155,19 +165,12 @@ class AppComponent extends PureComponent {
                             />
                         );
                         break;
-                    case 'menu':
-                        components.push(
-                            <NavMenu
-                                key={data}
-                                menuData={this.props.schema[data]}
-                            />
-                        )
                 }
             }
 
             return components;
         } else {
-            return <h3>hii</h3>
+            return <h3>Error</h3>
         }
 
     }
