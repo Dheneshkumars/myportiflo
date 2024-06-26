@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/myportiflo/static/css/main.3e79186d.css",
-    "main.js": "/myportiflo/static/js/main.41dcbd9e.js",
+    "main.css": "/myportiflo/static/css/main.540ee701.css",
+    "main.js": "/myportiflo/static/js/main.32779cd3.js",
     "static/media/loader.gif": "/myportiflo/static/media/loader.e117460d7187ddaa81e6.gif",
     "static/media/flaight.png": "/myportiflo/static/media/flaight.dbdffcf7fb039b9dc47b.png",
     "static/media/sky.webp": "/myportiflo/static/media/sky.5ecfc946a8a060f89ea9.webp",
     "static/media/experience.webp": "/myportiflo/static/media/experience.b2e4c7c2577a6627697b.webp",
     "static/media/About_Dhenesh.webp": "/myportiflo/static/media/About_Dhenesh.21ac686306fa244b548f.webp",
     "index.html": "/myportiflo/index.html",
-    "main.3e79186d.css.map": "/myportiflo/static/css/main.3e79186d.css.map",
-    "main.41dcbd9e.js.map": "/myportiflo/static/js/main.41dcbd9e.js.map"
+    "main.540ee701.css.map": "/myportiflo/static/css/main.540ee701.css.map",
+    "main.32779cd3.js.map": "/myportiflo/static/js/main.32779cd3.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e79186d.css",
-    "static/js/main.41dcbd9e.js"
+    "static/css/main.540ee701.css",
+    "static/js/main.32779cd3.js"
   ]
 }
