@@ -19,16 +19,16 @@ const Home = () => {
                                 <li><span>Freelancer</span></li>
                             </ul>
                         </div>
-                        <p className='text-light'>I am a professional Junior front end web developer and software developer.</p>
+                        <p className='text-light'>I am a professional front end developer and software developer.</p>
                         <span>
-                            <a href="https://github.com/Dheneshkumars/myportiflo" target="_blank" rel="noopener noreferrer">
+                            <a href="https://dheneshkumars.github.io" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon
                                     iconType={'git'}
                                 />
                             </a>
                         </span>
                         <span>
-                            <a href="https://www.linkedin.com/in/dhenesh-s-626b68291/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/dhenesh-kumar-s-626b68291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon
                                     iconType={'linkdin'}
                                 />
