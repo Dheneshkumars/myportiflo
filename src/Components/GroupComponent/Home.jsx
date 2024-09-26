@@ -21,7 +21,7 @@ const Home = () => {
                         </div>
                         <p className='text-light'>I am a professional Front end developer and software developer.</p>
                         <span>
-                            <a href="https://github.com/Dheneshkumars/myportiflo" target="_blank" rel="noopener noreferrer">
+                            <a href="https://dheneshkumars.github.io" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon
                                     iconType={'git'}
                                 />
