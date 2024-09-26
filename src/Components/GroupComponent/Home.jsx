@@ -1,6 +1,6 @@
 import flaight from '../../images/flaight.png';
 import SvgIcon from '../BaseComponent/SvgIcons';
-
+import resume from '../../Files/Dhenesh_kumar_resume.pdf';
 const Home = () => {
 
     return (
@@ -15,11 +15,11 @@ const Home = () => {
                         <div className="wrapper">
                             <h2 className='text-light'>I am a,</h2>
                             <ul className="dyamic_text ms-1 p-0">
-                                <li><span>Front End Developer</span></li>
+                                <li><span>Full Stack Developer</span></li>
                                 <li><span>Freelancer</span></li>
                             </ul>
                         </div>
-                        <p className='text-light'>I am a professional Junior front end web developer and software developer.</p>
+                        <p className='text-light'>I am a professional Front end developer and software developer.</p>
                         <span>
                             <a href="https://github.com/Dheneshkumars/myportiflo" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon
@@ -28,11 +28,16 @@ const Home = () => {
                             </a>
                         </span>
                         <span>
-                            <a href="https://www.linkedin.com/in/dhenesh-s-626b68291/" target="_blank" rel="noopener noreferrer">
+                            <a href="www.linkedin.com/in/dhenesh-kumar-s-626b68291" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon
                                     iconType={'linkdin'}
                                 />
                             </a>
+                        </span>
+                        <span>
+                            <b>
+                                <a href={resume} style={{ color: "white",textDecoration:'none' }} download={'Dhenesh_kumar_resume'}>Resume</a>
+                            </b>
                         </span>
                     </div>
                 </div>

@@ -163,7 +163,11 @@ header {
 }
 
 .home_content {
-    margin-top: 40px;
+    margin-top: 58px !important;
+}
+
+.home_content span{
+    margin-left: 8px !important;
 }
 
 /* Fly animation */
@@ -208,7 +212,7 @@ header {
 }
 
 .dyamic_text li span {
-    color: #fc606d;
+    color: greenyellow;
     font-size: 20px;
     font-weight: 600;
 
@@ -410,8 +414,9 @@ header {
     font-weight: 700;
 }
 .typing{
-    text-indent: 30px;
-    text-align: justify;
+    text-indent: 18px;
+    text-align: initial;
+    font-size: 15px;
 }
 
 .skill_card {

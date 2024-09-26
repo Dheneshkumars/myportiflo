@@ -13,7 +13,8 @@ const About = () => {
                         <h3 className='section_heading'>About</h3>
                         <div className="line"></div>
                         <div className="about-content">
-                            <p>I am a bachelor of engineer and junior web developer. I have one and half year's experience in IT Field. I am a most trained person in web Developing.</p>
+                            <p>I graduated with a Bachelor of Engineering in Electrical and Electronic Engineering from Anna University in 2020. I have 2.5 years of experience in front-end web development, having worked on over six UI and UX client projects, including e-commerce and medical websites, at my previous company. My skills include React.js, Node.js, jQuery, Spring Boot, Java, Python, Django, and Angular.
+                            </p>
                             <div className="row">
                                 <div className="col-lg-6">
                                     <ul className='about-ul'>
@@ -28,7 +29,7 @@ const About = () => {
                                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><g fill="currentColor"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" /><path d="M8 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2z" /></g></svg>
                                             <div className='mx-3'>
                                                 <strong>Phone:</strong>
-                                                <span> (+91)-9344368889</span>
+                                                <span>9344368889</span>
                                             </div>
                                         </li>
                                         <li className='about-list'>
