@@ -1,7 +1,14 @@
+import { useEffect, useState } from 'react';
 import about_image from '../../images/About_Dhenesh.webp';
 
 
 const About = () => {
+    const [age, setAge] = useState();
+    useEffect(() => {
+        let date = new Date();
+        let current_date = date.getFullYear();
+        setAge(current_date - 1999)
+    }, [])
     return (
         <section id='page_About' className='hide'>
             <div className="container py-4">
@@ -54,7 +61,7 @@ const About = () => {
                                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 22 24"><path fill="currentColor" d="M14.145 16.629a23.876 23.876 0 0 1-.052-2.525l-.001.037a4.847 4.847 0 0 0 1.333-2.868l.002-.021c.339-.028.874-.358 1.03-1.666a1.217 1.217 0 0 0-.455-1.218l-.003-.002c.552-1.66 1.698-6.796-2.121-7.326C13.485.35 12.479 0 11.171 0c-5.233.096-5.864 3.951-4.72 8.366a1.222 1.222 0 0 0-.455 1.229l-.001-.008c.16 1.306.691 1.638 1.03 1.666a4.858 4.858 0 0 0 1.374 2.888a24.648 24.648 0 0 1-.058 2.569l.005-.081C7.308 19.413.32 18.631 0 24h22.458c-.322-5.369-7.278-4.587-8.314-7.371z" /></svg>
                                             <div className="mx-3">
                                                 <strong>Age:</strong>
-                                                <span> 24</span>
+                                                <span> {age}</span>
                                             </div>
                                         </li>
                                         <li className="about-list">
