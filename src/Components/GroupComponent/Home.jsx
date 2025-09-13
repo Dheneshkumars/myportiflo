@@ -15,20 +15,20 @@ const Home = () => {
                         <div className="wrapper">
                             <h2 className='text-light'>I am a,</h2>
                             <ul className="dyamic_text ms-1 p-0">
-                                <li><span>Full Stack Developer</span></li>
-                                <li><span>Freelancer</span></li>
+                                <li><span>Mern Stack Developer</span></li>
+                                <li><span>App Developer</span></li>
                             </ul>
                         </div>
-                        <p className='text-light'>I am a professional Front end developer and software developer.</p>
+                        <p className='text-light'>I am a professional Mern stack Developer and App developer.</p>
                         <span>
-                            <a href="https://dheneshkumars.github.io" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/Dheneshkumars" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon
                                     iconType={'git'}
                                 />
                             </a>
                         </span>
                         <span>
-                            <a href="www.linkedin.com/in/dhenesh-kumar-s-626b68291" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/dhenesh-kumar-s-626b68291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon
                                     iconType={'linkdin'}
                                 />

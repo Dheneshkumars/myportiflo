@@ -1,9 +1,31 @@
 import SvgIcon from "../BaseComponent/SvgIcons";
 import ProgressBar from "../BaseComponent/progressBar";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 const Skill = ({
     skillData
 }) => {
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    };
+
 
 
     return (
@@ -14,103 +36,57 @@ const Skill = ({
                 </div>
                 <div className="skill-body">
                     <div className="skill-item">
-                        <h6 className="skill_head">Primary Skills:</h6>
-                        <h6 className="skill_primary">Front End Skill</h6>
-                        <ul className="my-5 row">
+                        <h6 className="skill_primary"><b>Front End Skill</b></h6>
+                        <Slider {...sliderSettings} className="my-5 row">
                             {
-                                skillData && skillData.type == 'skill' ?
+                                skillData && skillData.type === 'skill' ?
                                     skillData?.content && Array.isArray(skillData?.content) && skillData?.content.map((data, index) => {
-
-                                        if (data.type == "primary" && data.side == "front_end") {
+                                        if (data.type === "primary" && data.side === "front_end") {
                                             return (
-                                                <li className="col-md-4 mb-5 skill_card" key={index}>
+                                                <div className="col-md-4 mb-5 skill_card" key={index}>
                                                     <span>
-                                                        <SvgIcon
-                                                            iconType={data?.skill}
-                                                        />
+                                                        <SvgIcon iconType={data?.skill} />
                                                     </span>
-                                                    <strong>
-                                                        {
-                                                            data?.skill
-                                                        }
-                                                    </strong>
+                                                    <strong>{data?.skill}</strong>
                                                     <ProgressBar
                                                         percent={data?.percent}
                                                         text={data?.skill}
                                                     />
-                                                </li>
-                                            )
+                                                </div>
+                                            );
                                         }
-
+                                        return null;
                                     })
                                     :
                                     null
                             }
-                        </ul>
-                        <h6 className="skill_primary">Back End Skill</h6>
-                        <ul className="my-5 row">
-                            {
-                                skillData && skillData.type == 'skill' ?
-                                    skillData?.content && Array.isArray(skillData?.content) && skillData?.content.map((data, index) => {
+                        </Slider>
 
-                                        if (data.type == "primary" && data.side == "back_end") {
+                        <h6 className="skill_primary"><b>Back End Skill</b></h6>
+                        <Slider {...sliderSettings} className="my-5 row">
+                            {
+                                skillData && skillData.type === 'skill' ?
+                                    skillData?.content && Array.isArray(skillData?.content) && skillData?.content.map((data, index) => {
+                                        if (data.type === "primary" && data.side === "back_end") {
                                             return (
-                                                <li className="col-md-4 mb-5 skill_card" key={index}>
+                                                <div className="col-md-4 mb-5 skill_card" key={index}>
                                                     <span>
-                                                        <SvgIcon
-                                                            iconType={data?.skill}
-                                                        />
+                                                        <SvgIcon iconType={data?.skill} />
                                                     </span>
-                                                    <strong>
-                                                        {
-                                                            data?.skill
-                                                        }
-                                                    </strong>
+                                                    <strong>{data?.skill}</strong>
                                                     <ProgressBar
                                                         percent={data?.percent}
                                                         text={data?.skill}
                                                     />
-                                                </li>
-                                            )
+                                                </div>
+                                            );
                                         }
-
+                                        return null;
                                     })
                                     :
                                     null
                             }
-                        </ul>
-                        <h6 className="skill_head2">Secondary Skills:</h6>
-                        <ul className="my-5 row">
-                            {
-                                skillData && skillData.type == 'skill' ?
-                                    skillData?.content && Array.isArray(skillData?.content) && skillData?.content.map((data, index) => {
-
-                                        if (data.type == "secondary") {
-                                            return (
-                                                <li className="col-md-4 mb-5 skill_card" key={index}>
-                                                    <span>
-                                                        <SvgIcon
-                                                            iconType={data?.skill}
-                                                        />
-                                                    </span>
-                                                    <strong>
-                                                        {
-                                                            data?.skill
-                                                        }
-                                                    </strong>
-                                                    <ProgressBar
-                                                        percent={data?.percent}
-                                                        text={data?.skill}
-                                                    />
-                                                </li>
-                                            )
-                                        }
-
-                                    })
-                                    :
-                                    null
-                            }
-                        </ul>
+                        </Slider>
                     </div>
                 </div>
             </div>

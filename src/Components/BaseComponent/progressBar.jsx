@@ -1,35 +1,44 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 
-const ProgressBar = ({
-    text,
-    percent,
-    id
-}) => {
-    const selector = useSelector(state=>state?.pageReducer);
-    const activePage = selector && selector.activepage;
-    const elements = document.getElementsByClassName(`${text}-fill`);
+const ProgressBar = ({ text, percent, id }) => {
+    const { activepage } = useSelector(state => state?.pageReducer);
+    const fillRef = useRef(null);
+    const [fillColor, setFillColor] = useState("blue");
+
     useEffect(() => {
-        for (let i = 0; i < elements.length; i++) {
-            const element = elements[i];
-            element.style.width = `${percent}%`;
-            if(element.style.width < '80%'){
-                element.style.backgroundColor = 'blue';
-            }
-            if(element.style.width > '90%' && element.style.width > '80%'){
-                element.style.backgroundColor ='green';
-            }
+        // Set bar color based on percent
+        if (percent >= 90) {
+            setFillColor("green");
+        } else if (percent >= 80) {
+            setFillColor("blue");
+        } else {
+            setFillColor("#007bff"); // default blue
         }
-    }, [])
-   
-    
+
+        // Animate the bar width after mount
+        if (fillRef.current) {
+            fillRef.current.style.width = `${percent}%`;
+        }
+    }, [percent]);
+
     return (
         <div className="skill-bar my-3" id={id}>
             <div className="skill-level">
-                <div className={`skill-fill ${text}-fill ${activePage == 'Skills' ? "skill_animation" : ""}`}>{percent}%</div>
+                <div
+                    ref={fillRef}
+                    className={`skill-fill ${text}-fill ${activepage === "Skills" ? "skill_animation" : ""
+                        }`}
+                    style={{
+                        backgroundColor: fillColor,
+                        transition: "width 1s ease-in-out",
+                    }}
+                >
+                    {percent}%
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ProgressBar;

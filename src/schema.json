@@ -16,8 +16,8 @@
             "Contacts"
         ]
     },
-    "home":{
-        "type":"home"
+    "home": {
+        "type": "home"
     },
     "about": {
         "type": "about",
@@ -33,106 +33,114 @@
         }
     },
     "skill": {
-        "type":"skill",
-        "content":[
+        "type": "skill",
+        "content": [
             {
-                "type":"primary",
-                "side":"front_end",
-                "skill":"HTML",
-                "percent":95
+                "type": "primary",
+                "side": "front_end",
+                "skill": "HTML",
+                "percent": 95
             },
             {
-                "type":"primary",
-                "side":"front_end",
-                "skill":"CSS",
-                "percent":83
+                "type": "primary",
+                "side": "front_end",
+                "skill": "CSS",
+                "percent": 83
             },
             {
-                "type":"primary",
-                "side":"front_end",
-                "skill":"BOOTSTRAP",
-                "percent":90
+                "type": "primary",
+                "side": "front_end",
+                "skill": "BOOTSTRAP",
+                "percent": 90
             },
             {
-                "type":"primary",
-                "side":"front_end",
-                "skill":"SASS",
-                "percent":80
+                "type": "primary",
+                "side": "front_end",
+                "skill": "SASS",
+                "percent": 80
             },
             {
-                "type":"primary",
-                "side":"front_end",
-                "skill":"JAVASCRIPT",
-                "percent":75
+                "type": "primary",
+                "side": "front_end",
+                "skill": "JAVASCRIPT",
+                "percent": 75
             },
             {
-                "type":"primary",
-                "side":"front_end",
-                "skill":"JQUERY",
-                "percent":82
+                "type": "primary",
+                "side": "front_end",
+                "skill": "JQUERY",
+                "percent": 82
             },
             {
-                "type":"primary",
-                "side":"front_end",
-                "skill":"REACT",
-                "percent":87
+                "type": "primary",
+                "side": "front_end",
+                "skill": "REACT",
+                "percent": 87
             },
             {
-                "type":"primary",
-                "side":"back_end",
-                "skill":"Node JS",
-                "percent":68
+                "type": "primary",
+                "side": "back_end",
+                "skill": "Node JS",
+                "percent": 68
             },
             {
-                "type":"primary",
-                "side":"back_end",
-                "skill":"Express JS",
-                "percent":63
+                "type": "primary",
+                "side": "back_end",
+                "skill": "Express JS",
+                "percent": 63
             },
             {
-                "type":"secondary",
-                "skill":"PYTHON",
-                "percent":54
+                "type": "primary",
+                "side": "back_end",
+                "skill": "PYTHON",
+                "percent": 54
             },
             {
-                "type":"secondary",
-                "skill":"C++",
-                "percent":60
+                "type": "primary",
+                "side": "back_end",
+                "skill": "C++",
+                "percent": 60
+            },
+            {
+                "type": "primary",
+                "side": "back_end",
+                "skill": "Java",
+                "percent": 60
             }
         ]
     },
     "education": {
-        "type":"education",
-        "content":[
+        "type": "education",
+        "content": [
             {
-                "university":"Anna University",
-                "Name":"Vins Christian College Of Engineering",
-                "period":"Jun-2017 to Mar-2020",
+                "university": "Anna University",
+                "Name": "Vins Christian College Of Engineering",
+                "period": "Jun-2017 to Mar-2020",
                 "mark_obtained": "6.8 cgpa",
                 "place": "Nagercoil - 629003",
-                "type":"Bachelor of Electrical Engineering"
+                "type": "Bachelor of Electrical Engineering"
             },
             {
-                "type":"Diploma in Electrical Engineering",
-                "university":"TamilNadu Technical Department",
-                "Name":"Government polytechnic college",
-                "period":"Jun-2014 to Mar-2017",
+                "type": "Diploma in Electrical Engineering",
+                "university": "TamilNadu Technical Department",
+                "Name": "Government polytechnic college",
+                "period": "Jun-2014 to Mar-2017",
                 "mark_obtained": "75%",
-                "place":"Nagercoil - 629001"
+                "place": "Nagercoil - 629001"
             },
             {
-                "type":"Secondary School",
-                "university":"TamilNadu State Board",
-                "Name":"Government higher secondary school",
-                "period":"Jun-2013 to april-2014",
+                "type": "Secondary School",
+                "university": "TamilNadu State Board",
+                "Name": "Government higher secondary school",
+                "period": "Jun-2013 to april-2014",
                 "mark_obtained": "78%",
-                "place":"Eathamozhi - 629501"
+                "place": "Eathamozhi - 629501"
             }
         ]
     },
     "experience": {
-        "type":"experience",
-        "content":[
+        "type": "experience",
+        "content": [
             "Collaborated with cross-functional teams to design, develop, and deploy responsive websites and web applications, ensuring optimal user experiences across various devices and browsers.",
             "Assisted in the development and maintenance of company websites, regularly updating content and ensuring site security and performance.",
             "Implemented modern front-end technologies such as HTML5, CSS3, and JavaScript to create interactive and visually appealing user interfaces.",
@@ -143,7 +151,7 @@
         ]
     },
     "contact": {},
-    "menu":[
+    "menu": [
         "Home",
         "About",
         "Skills",

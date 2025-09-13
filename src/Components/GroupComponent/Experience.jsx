@@ -9,17 +9,7 @@ const Experince = () => {
                     <div className="col-lg-7">
                         <div className="my-2">
                             <div className="d-md-flex align-items-center">
-                                <h6 className='exp_head m-0'>Machine Operator </h6>
-                                <p className='px-2 mb-0'>[Jun 2020 - May 2021] :</p>
-                            </div>
-                            <strong>summary: </strong>
-                            <p className='typing'>
-                                It's a textile industry [kumaran latex pvt ltd]. I have worked in 11 months of that comapany.The machine build up 3 phase induction motor.I have interseted in software developement and website developement. so I have quit my job in that company.
-                            </p>
-                        </div>
-                        <div className="my-2">
-                            <div className="d-md-flex align-items-center">
-                                <h6 className='exp_head m-0'>Full Stack Developer </h6>
+                                <h6 className='exp_head m-0'>Full Stack Developer & App Developer </h6>
                                 <p className='px-2 mb-0'>[Oct 2021 - Feb 2024] :</p>
                             </div>
                             <strong>summary: </strong>

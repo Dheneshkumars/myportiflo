@@ -93,13 +93,14 @@ header {
     margin: 10px 0px;
 }
 
-.pre-load{
+.pre-load {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 90vh;
 }
-.pre-load img{
+
+.pre-load img {
     width: 200px;
 }
 
@@ -108,6 +109,7 @@ header {
 /* header */
 .nav-menu {
     display: none;
+
     @media (min-width:768px) {
         display: block !important;
     }
@@ -157,7 +159,8 @@ header {
     align-items: center !important;
     height: 90vh;
 }
-.boy_img{
+
+.boy_img {
     width: 250px;
     height: 250px;
 }
@@ -166,7 +169,7 @@ header {
     margin-top: 58px !important;
 }
 
-.home_content span{
+.home_content span {
     margin-left: 8px !important;
 }
 
@@ -174,22 +177,27 @@ header {
 .bird {
     position: absolute;
 }
-.bird_one{
+
+.bird_one {
     top: 6%;
     left: -10%;
-    animation: birdMove 15s linear infinite ;
+    animation: birdMove 15s linear infinite;
+
     @media (min-width:768px) {
         top: 16%;
     }
 }
+
 @keyframes birdMove {
-    0%{
+    0% {
         left: -10%;
     }
-    100%{
+
+    100% {
         left: 110%;
     }
 }
+
 .wrapper {
     display: inline-flex;
 }
@@ -220,11 +228,13 @@ header {
         font-size: 30px;
     }
 }
-.home_img{
+
+.home_img {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 0px !important;
+
     @media (min-width:768px) {
         display: block;
     }
@@ -259,27 +269,57 @@ header {
 }
 
 /* skills */
-.skill_head {
-    font-size: 18px;
-    font-weight: 800;
-    color: skyblue;
-    margin-bottom: 20px;
-    font-family: 'Font Name', sans-serif;
+.skill-card {
+    background: #f8f8f8;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.skill_head2 {
-    font-size: 18px;
-    font-weight: 800;
-    color: orangered;
-    margin-bottom: 20px;
-    font-family: 'Font Name', sans-serif;
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-.skill_primary {
-    font-size: 16px;
+.skill-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-size: 18px;
     font-weight: 600;
-    font-family: 'Font Name', sans-serif;
-    padding-left: 10px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.skill-bar {
+  width: 100%;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+}
+
+.skill-level {
+  width: 100%;
+  height: 100%;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0; /* Initial width for animation */
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
 }
 
 
@@ -332,6 +372,7 @@ header {
     width: 100%;
     height: 250px;
     background-position: center;
+
     @media (min-width:992px) {
         width: 420px;
         height: 350px;
@@ -394,26 +435,31 @@ header {
     background-color: green;
     transition: width 5s ease-in-out;
 }
-.map_view{
+
+.map_view {
     width: 100%;
     height: 250px;
 }
-.hide{
-    opacity: 0 ;
+
+.hide {
+    opacity: 0;
     position: relative;
     transition: all 1s;
     transform: translate(-100px);
 }
-.show{
+
+.show {
     opacity: 1;
     transform: translate(0);
 }
-.exp_head{
+
+.exp_head {
     color: chartreuse;
     font-size: 22px;
     font-weight: 700;
 }
-.typing{
+
+.typing {
     text-indent: 18px;
     text-align: initial;
     font-size: 15px;
@@ -428,6 +474,7 @@ header {
     margin: 10px;
     padding: 10px;
     transition: transform 0.3s ease;
+
     @media (min-width:768px) {
         margin: 10px 20px;
     }
@@ -437,7 +484,8 @@ header {
 .skill_card:hover {
     transform: scale(1.1);
 }
-.three_d{
+
+.three_d {
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
@@ -447,6 +495,7 @@ header {
     color: transparent;
     transform: perspective(300px) rotateY(20deg);
 }
+
 .letter {
     display: inline-block;
     transform-origin: center;
@@ -457,13 +506,16 @@ header {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
+
 .letter:nth-child(1) {
     animation-delay: 0s;
 }
+
 .letter:nth-child(2) {
     animation-delay: 0.2s;
 }
@@ -479,6 +531,7 @@ header {
 .letter:nth-child(5) {
     animation-delay: 0.8s;
 }
+
 .letter:nth-child(6) {
     animation-delay: 1s;
 }
@@ -487,7 +540,7 @@ header {
     animation-delay: 1.2s;
 }
 
-.menu_list{
+.menu_list {
     position: absolute;
     top: 100%;
     left: 0%;
