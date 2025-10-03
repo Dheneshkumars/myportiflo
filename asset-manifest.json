@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "/myportiflo/static/css/main.b14e080a.css",
-    "main.js": "/myportiflo/static/js/main.375d9fca.js",
+    "main.css": "/myportiflo/static/css/main.d769d884.css",
+    "main.js": "/myportiflo/static/js/main.0eb73d28.js",
     "static/media/loader.gif": "/myportiflo/static/media/loader.e117460d7187ddaa81e6.gif",
     "static/media/flaight.png": "/myportiflo/static/media/flaight.dbdffcf7fb039b9dc47b.png",
     "static/media/sky.webp": "/myportiflo/static/media/sky.5ecfc946a8a060f89ea9.webp",
     "static/media/Dhenesh_kumar_resume.pdf": "/myportiflo/static/media/Dhenesh_kumar_resume.84655c723808d77ec2f5.pdf",
     "static/media/experience.webp": "/myportiflo/static/media/experience.b2e4c7c2577a6627697b.webp",
     "static/media/About_Dhenesh.webp": "/myportiflo/static/media/About_Dhenesh.21ac686306fa244b548f.webp",
-    "static/media/slick.svg": "/myportiflo/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/myportiflo/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/myportiflo/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/myportiflo/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/myportiflo/index.html",
-    "main.b14e080a.css.map": "/myportiflo/static/css/main.b14e080a.css.map",
-    "main.375d9fca.js.map": "/myportiflo/static/js/main.375d9fca.js.map"
+    "main.d769d884.css.map": "/myportiflo/static/css/main.d769d884.css.map",
+    "main.0eb73d28.js.map": "/myportiflo/static/js/main.0eb73d28.js.map"
   },
   "entrypoints": [
-    "static/css/main.b14e080a.css",
-    "static/js/main.375d9fca.js"
+    "static/css/main.d769d884.css",
+    "static/js/main.0eb73d28.js"
   ]
 }
