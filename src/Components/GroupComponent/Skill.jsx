@@ -1,97 +1,77 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 import SvgIcon from "../BaseComponent/SvgIcons";
 import ProgressBar from "../BaseComponent/progressBar";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 
-
-const Skill = ({
-    skillData
-}) => {
-    const sliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
+const Skill = ({ skillData }) => {
+    const swiperSettings = {
+        modules: [Autoplay, Pagination],
+        spaceBetween: 20,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            clickable: true,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
     };
 
-
+    const renderSkills = (side) =>
+        skillData?.type === "skill" &&
+        skillData?.content
+            ?.filter((data) => data.type === "primary" && data.side === side)
+            .map((data, index) => (
+                <SwiperSlide key={index}>
+                    <div className="skill-slide">
+                        <span>
+                            <SvgIcon iconType={data?.skill} />
+                        </span>
+                        <strong className="skill-name">{data?.skill}</strong>
+                        <ProgressBar
+                            percent={data?.percent}
+                            text={data?.skill}
+                        />
+                    </div>
+                </SwiperSlide>
+            ));
 
     return (
         <section id="page_Skills" className="hide">
             <div className="container">
-                <div className='skill-header'>
+                <div className="skill-header">
                     <h3>Skills</h3>
                 </div>
+
                 <div className="skill-body">
                     <div className="skill-item">
                         <h6 className="skill_primary"><b>Front End Skill</b></h6>
-                        <Slider {...sliderSettings} className="my-5 row">
-                            {
-                                skillData && skillData.type === 'skill' ?
-                                    skillData?.content && Array.isArray(skillData?.content) && skillData?.content.map((data, index) => {
-                                        if (data.type === "primary" && data.side === "front_end") {
-                                            return (
-                                                <div className="col-md-4 mb-5 skill_card" key={index}>
-                                                    <span>
-                                                        <SvgIcon iconType={data?.skill} />
-                                                    </span>
-                                                    <strong>{data?.skill}</strong>
-                                                    <ProgressBar
-                                                        percent={data?.percent}
-                                                        text={data?.skill}
-                                                    />
-                                                </div>
-                                            );
-                                        }
-                                        return null;
-                                    })
-                                    :
-                                    null
-                            }
-                        </Slider>
+                        <Swiper {...swiperSettings} className="skill-swiper my-4">
+                            {renderSkills("front_end")}
+                        </Swiper>
 
-                        <h6 className="skill_primary"><b>Back End Skill</b></h6>
-                        <Slider {...sliderSettings} className="my-5 row">
-                            {
-                                skillData && skillData.type === 'skill' ?
-                                    skillData?.content && Array.isArray(skillData?.content) && skillData?.content.map((data, index) => {
-                                        if (data.type === "primary" && data.side === "back_end") {
-                                            return (
-                                                <div className="col-md-4 mb-5 skill_card" key={index}>
-                                                    <span>
-                                                        <SvgIcon iconType={data?.skill} />
-                                                    </span>
-                                                    <strong>{data?.skill}</strong>
-                                                    <ProgressBar
-                                                        percent={data?.percent}
-                                                        text={data?.skill}
-                                                    />
-                                                </div>
-                                            );
-                                        }
-                                        return null;
-                                    })
-                                    :
-                                    null
-                            }
-                        </Slider>
+                        <h6 className="skill_primary mt-4"><b>Back End Skill</b></h6>
+                        <Swiper {...swiperSettings} className="skill-swiper my-4">
+                            {renderSkills("back_end")}
+                        </Swiper>
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Skill;
