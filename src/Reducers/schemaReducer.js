@@ -11,8 +11,7 @@ const schemaReducer = createSlice({
     initialState,
     reducers: {
         schemaData: (state, action) => {
-            const { schema } = action.payload;
-            state.schema = schema;
+            state.schema = action.payload;
         }
     }
 });

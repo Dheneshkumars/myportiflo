@@ -36,7 +36,7 @@ const Home = () => {
                         </span>
                         <span>
                             <b>
-                                <a href={resume} style={{ color: "white",textDecoration:'none' }} download={'Dhenesh_kumar_resume'}>Resume</a>
+                                <a href={resume} style={{ color: "white",textDecoration:'none' }} download={'Dhenesh_kumar_resume'}><SvgIcon iconType={"resume"} /></a>
                             </b>
                         </span>
                     </div>

@@ -8,18 +8,15 @@ import ProgressBar from "../BaseComponent/progressBar";
 
 const Skill = ({ skillData }) => {
     const swiperSettings = {
-        modules: [Autoplay, Pagination],
+        modules: [Autoplay],
         spaceBetween: 20,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
         },
-        pagination: {
-            clickable: true,
-        },
         breakpoints: {
             1024: {
-                slidesPerView: 3,
+                slidesPerView: 4,
             },
             768: {
                 slidesPerView: 2,

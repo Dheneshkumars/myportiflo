@@ -1,4 +1,4 @@
-import experince_img from '../../images/experience.webp';
+import experince_img from '../../images/experience.jpg';
 
 const Experince = () => {
     return (
@@ -9,18 +9,28 @@ const Experince = () => {
                     <div className="col-lg-7">
                         <div className="my-2">
                             <div className="d-md-flex align-items-center">
-                                <h6 className='exp_head m-0'>Full Stack Developer & App Developer </h6>
-                                <p className='px-2 mb-0'>[Oct 2021 - Feb 2024] :</p>
+                                <h6 className='exp_head m-0'>Front end Developer [Gowebez software solution]</h6>
+                                <p className='px-2 mb-0'>[Oct 2021 - Feb 2024]</p>
                             </div>
-                            <strong>summary: </strong>
                             <p className='typing'>
                                 Dedicated and skilled front web developer with two and half years of hands-on experience in designing, developing, and maintaining web applications. Proficient in front-end and back-end technologies,I have a strong foundation in creating responsive and user-friendly websites. Eager to contribute my expertise to dynamic projects and continue to grow as a developer. I worked in front end web developer in Gowebez software private ltd comapany chennai.I have used Html,css,scss,bootstrap,Javascript,Jquery,React js,Node Js and angular.
                             </p>
-                            <strong>Website link:</strong><span> &nbsp;<a href='https://app.inflowcare.com/' target='_blank'>Inflowcare.com</a></span>
+                            <strong>Project link:</strong><span> &nbsp;<a href='https://app.inflowcare.com/' target='_blank'>Inflowcare.com</a></span>
                         </div>
+                        <div className="my-2">
+                            <div className="d-md-flex align-items-center">
+                                <h6 className='exp_head m-0'>Mern Stack Developer [Freelance]</h6>
+                                <p className='px-2 mb-0'>[Feb 2024 - Currently]</p>
+                            </div>
+                            <p className='typing'>
+                                Building full-stack web applications using MongoDB, Express.js, React, and Node.js.
+                                Developing responsive user interfaces and scalable backend APIs to deliver seamless user experiences.
+                                Collaborating closely with clients to understand requirements, provide technical solutions, and ensure timely project delivery.
+                            </p>
 
+                        </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-5">
                         <img src={experince_img} className='experience_img' alt='experience' />
                     </div>
                 </div>

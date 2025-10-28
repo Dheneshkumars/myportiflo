@@ -22,14 +22,16 @@
     "about": {
         "type": "about",
         "content": {
-            "desciption": "I am a bachelor of engineer and junior web developer. I have one and half year's experience in IT Field. I am a most trained person in web Developing.",
-            "dob": "23 Dec-1999",
-            "age": 24,
-            "phone_number": 9344368889,
-            "degree": "Bachelor of Engineering[B.E]",
-            "city": "Kanyakumari,TamilNadu",
-            "Email": "dheneshkumar111@gmail.com",
-            "freelance": true
+            "description": "I graduated with a Bachelor of Engineering in Electrical and Electronic Engineering from Anna University in 2020. I have 2.5 years of experience in front-end web development, having worked on over six UI and UX client projects, including e-commerce and medical websites, at my previous company. My skills include React.js, Node.js, jQuery, Spring Boot, Java, Python, Django, and Angular.",
+            "data": {
+                "dob": "23 Dec-1999",
+                "phone_number": 9344368889,
+                "degree": "Bachelor of Engineering[B.E]",
+                "city": "Kanyakumari,TamilNadu",
+                "Email": "dheneshkumar111@gmail.com",
+                "freelance": "Available",
+                "age":""
+            }
         }
     },
     "skill": {
@@ -113,28 +115,22 @@
         "type": "education",
         "content": [
             {
-                "university": "Anna University",
                 "Name": "Vins Christian College Of Engineering",
-                "period": "Jun-2017 to Mar-2020",
+                "period": "Jun-2017 to April-2020",
                 "mark_obtained": "6.8 cgpa",
-                "place": "Nagercoil - 629003",
                 "type": "Bachelor of Electrical Engineering"
             },
             {
-                "type": "Diploma in Electrical Engineering",
-                "university": "TamilNadu Technical Department",
                 "Name": "Government polytechnic college",
-                "period": "Jun-2014 to Mar-2017",
+                "period": "Jun-2014 to April-2017",
                 "mark_obtained": "75%",
-                "place": "Nagercoil - 629001"
+                "type": "Diploma in Electrical Engineering"
             },
             {
-                "type": "Secondary School",
-                "university": "TamilNadu State Board",
                 "Name": "Government higher secondary school",
-                "period": "Jun-2013 to april-2014",
+                "period": "Jun-2013 to April-2014",
                 "mark_obtained": "78%",
-                "place": "Eathamozhi - 629501"
+                "type": "Secondary School"
             }
         ]
     },
