@@ -9,7 +9,7 @@ const Experince = () => {
                     <div className="col-lg-7">
                         <div className="my-2">
                             <div className="d-md-flex align-items-center">
-                                <h6 className='exp_head m-0'>Front end Developer [Gowebez software solution]</h6>
+                                <h6 className='exp_head m-0'>Front End Developer [Gowebez software solution]</h6>
                                 <p className='px-2 mb-0'>[Oct 2021 - Feb 2024]</p>
                             </div>
                             <p className='typing'>
@@ -19,13 +19,11 @@ const Experince = () => {
                         </div>
                         <div className="my-2">
                             <div className="d-md-flex align-items-center">
-                                <h6 className='exp_head m-0'>Mern Stack Developer [Freelance]</h6>
-                                <p className='px-2 mb-0'>[Feb 2024 - Currently]</p>
+                                <h6 className='exp_head m-0'>Front End Developer [Kumaran Latex private ltd]</h6>
+                                <p className='px-2 mb-0'>[Feb 2025 - Sep 2025]</p>
                             </div>
                             <p className='typing'>
-                                Building full-stack web applications using MongoDB, Express.js, React, and Node.js.
-                                Developing responsive user interfaces and scalable backend APIs to deliver seamless user experiences.
-                                Collaborating closely with clients to understand requirements, provide technical solutions, and ensure timely project delivery.
+                                From February 2025 to September 2025, I worked as a Front-End Developer on the ERP team, focusing on building and maintaining user interfaces using React.js. My responsibilities included developing core modules of the ERP system, integrating front-end components with RESTful APIs, and improving overall performance and responsiveness. I collaborated closely with back-end developers and designers to create efficient and user-friendly dashboards and forms. During this period, I optimized the application’s load times, implemented modern React features like hooks and lazy loading, and participated in Agile sprints to ensure timely delivery of new features and enhancements. This role strengthened my skills in React.js, JavaScript, and front-end performance optimization while contributing to a smoother and more responsive ERP user experience.
                             </p>
 
                         </div>

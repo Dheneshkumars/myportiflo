@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import about_image from '../../images/About_Dhenesh.webp';
+import about_image from '../../images/About_image.png';
 import { useSelector } from 'react-redux';
 import SvgIcons from "../BaseComponent/SvgIcons";
 
