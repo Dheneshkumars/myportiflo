@@ -79,7 +79,7 @@ const Contact = () => {
                     <SvgIcon
                         iconType={'heart'}
                     />
-                    developed By Dhenesh
+                    Developed By Dhenesh
                 </h6>
             </div>
         </section>

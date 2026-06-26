@@ -15,11 +15,11 @@ const Home = () => {
                         <div className="wrapper">
                             <h2 className='text-light'>I am a,</h2>
                             <ul className="dyamic_text ms-1 p-0">
-                                <li><span>Front End Developer</span></li>
+                                <li><span>Full Stack Developer</span></li>
                                 <li><span>App Developer</span></li>
                             </ul>
                         </div>
-                        <p className='text-light'>I am a professional Front End Developer and App developer.</p>
+                        <p className='text-light'>I am a professional Full Stack Developer and App developer.</p>
                         <span>
                             <a href="https://github.com/Dheneshkumars" target="_blank" rel="noopener noreferrer">
                                 <SvgIcon

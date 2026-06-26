@@ -1,39 +1,269 @@
-import experince_img from '../../images/experience.jpg';
+import "../../style/experience.css";
+import experince_img from "../../images/experience.png";
+import { FaLaptopCode, FaCode, FaBriefcase, FaExternalLinkAlt, FaAward } from "react-icons/fa";
+import CountUp from "react-countup";
 
-const Experince = () => {
+const experienceSummary = [
+    {
+        text: "Developed and maintained enterprise web applications using ASP.NET Core, Angular, and MySQL.",
+    },
+    {
+        text: "Designed and implemented RESTful APIs for seamless communication between frontend and backend.",
+    },
+    {
+        text: "Built responsive and interactive user interfaces using Angular, TypeScript, HTML, CSS, and Bootstrap.",
+    },
+    {
+        text: "Designed and optimized MySQL database schemas, stored procedures, and queries for better performance.",
+    },
+    {
+        text: "Implemented CRUD operations, authentication, and role-based authorization.",
+    },
+    {
+        text: "Fixed bugs, enhanced existing features, and improved application performance.",
+    },
+    {
+        text: "Collaborated with cross-functional teams in an Agile/Scrum environment and participated in code reviews.",
+    },
+    {
+        text: "Used Git for version control and maintained code quality through best development practices.",
+    },
+];
+
+const gowebezSummary = [
+    {
+        text: "Developed responsive and high-performance web applications using React.js, Angular, JavaScript, HTML5, CSS3, SCSS, and Bootstrap.",
+    },
+    {
+        text: "Built reusable and modular UI components to improve maintainability and reduce development time.",
+    },
+    {
+        text: "Integrated RESTful APIs and managed asynchronous data using Axios and Fetch API.",
+    },
+    {
+        text: "Collaborated with UI/UX designers to convert Figma and Adobe XD designs into pixel-perfect responsive interfaces.",
+    },
+    {
+        text: "Implemented state management using Redux and React Hooks.",
+    },
+    {
+        text: "Optimized application performance using lazy loading and code splitting.",
+    },
+    {
+        text: "Worked closely with backend developers and QA teams in Agile/Scrum.",
+    },
+    {
+        text: "Maintained source code using Git and followed best development practices.",
+    },
+];
+
+const Experience = () => {
     return (
-        <section className='experience_body hide' id='page_Experience'>
+        <section className="experience-section" id="page_Experience">
             <div className="container">
-                <h3 className='section_heading'>Experience</h3>
-                <div className="row">
-                    <div className="col-lg-7">
-                        <div className="my-2">
-                            <div className="d-md-flex align-items-center">
-                                <h6 className='exp_head m-0'>Front End Developer [Gowebez software solution]</h6>
-                                <p className='px-2 mb-0'>[Oct 2021 - Feb 2024]</p>
-                            </div>
-                            <p className='typing'>
-                                Dedicated and skilled front web developer with two and half years of hands-on experience in designing, developing, and maintaining web applications. Proficient in front-end and back-end technologies,I have a strong foundation in creating responsive and user-friendly websites. Eager to contribute my expertise to dynamic projects and continue to grow as a developer. I worked in front end web developer in Gowebez software private ltd comapany chennai.I have used Html,css,scss,bootstrap,Javascript,Jquery,React js,Node Js and angular.
-                            </p>
-                            <strong>Project link:</strong><span> &nbsp;<a href='https://app.inflowcare.com/' target='_blank'>Inflowcare.com</a></span>
-                        </div>
-                        <div className="my-2">
-                            <div className="d-md-flex align-items-center">
-                                <h6 className='exp_head m-0'>Front End Developer [Kumaran Latex private ltd]</h6>
-                                <p className='px-2 mb-0'>[Feb 2025 - Sep 2025]</p>
-                            </div>
-                            <p className='typing'>
-                                From February 2025 to September 2025, I worked as a Front-End Developer on the ERP team, focusing on building and maintaining user interfaces using React.js. My responsibilities included developing core modules of the ERP system, integrating front-end components with RESTful APIs, and improving overall performance and responsiveness. I collaborated closely with back-end developers and designers to create efficient and user-friendly dashboards and forms. During this period, I optimized the application’s load times, implemented modern React features like hooks and lazy loading, and participated in Agile sprints to ensure timely delivery of new features and enhancements. This role strengthened my skills in React.js, JavaScript, and front-end performance optimization while contributing to a smoother and more responsive ERP user experience.
-                            </p>
+                <div className="experience-header text-center">
+                    <span className="experience-subtitle">
+                        MY JOURNEY
+                    </span>
+                    <h2 className="section_heading">
+                        Work Experience
+                    </h2>
+                    <p className="experience-desc">
+                        Passionate Full Stack Developer with over 3 years of experience
+                        developing responsive, scalable and enterprise-grade web
+                        applications using modern frontend and backend technologies.
+                    </p>
 
+                </div>
+                <div className="timeline-wrapper">
+                    <div className="timeline-item"> <div className="timeline-left">
+                        <div className="timeline-line"></div>
+                        <div className="timeline-circle">
+                            <FaLaptopCode />
+                        </div>
+                        <div className="timeline-year">
+                            <h4>2021</h4>
+                            <span>to</span>
+                            <h4>2024</h4>
+                        </div>
+                        <small>2.4 Years</small>
+                    </div>
+                        <div className="timeline-content">
+                            <div className="experience-card">
+                                <div className="card-header-custom">
+                                    <div>
+                                        <h3 className="job-title">
+                                            Frontend Developer
+                                        </h3>
+                                        <h6 className="company-name">
+                                            Gowebez Software Solution
+                                        </h6>
+                                    </div>
+                                    <span className="experience-date">
+                                        Oct 2021 - Feb 2024
+                                    </span>
+                                </div>
+                                <ol className="experience-list">
+                                    {gowebezSummary.map((item, index) => (
+                                        <li key={index}>
+                                            {item.text}
+                                        </li>
+
+                                    ))}
+                                </ol>
+                                <div className="tech-stack">
+                                    <span>React.js</span>
+                                    <span>Angular</span>
+                                    <span>JavaScript</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>SCSS</span>
+                                    <span>Bootstrap</span>
+                                    <span>Redux</span>
+                                    <span>REST API</span>
+                                    <span>Git</span>
+                                </div>
+                                <div className="experience-footer">
+                                    <a
+                                        href="https://app.inflowcare.com/"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="project-btn"
+                                    >
+                                        <FaExternalLinkAlt className="ms-2" />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-lg-5">
-                        <img src={experince_img} className='experience_img' alt='experience' />
+                    <div className="timeline-item">
+                        <div className="timeline-left">
+                            <div className="timeline-line"></div>
+                            <div className="timeline-circle">
+                                <FaCode />
+                            </div>
+                            <div className="timeline-year">
+                                <h4>2025</h4>
+                                <span>to</span>
+                                <h4>2026</h4>
+                            </div>
+                            <small>7 Months</small>
+                        </div>
+                        <div className="timeline-content">
+                            <div className="experience-card">
+                                <div className="card-header-custom">
+                                    <div>
+                                        <h3 className="job-title">
+                                            Software Developer
+                                        </h3>
+                                        <h6 className="company-name">
+                                            NOHITATU Technologies Pvt. Ltd.
+                                        </h6>
+                                    </div>
+                                    <span className="experience-date">
+                                        Dec 2025 - Jun 2026
+                                    </span>
+                                </div>
+                                <ol className="experience-list">
+                                    {experienceSummary.map((item, index) => (
+                                        <li key={index}>
+                                            {item.text}
+                                        </li>
+                                    ))}
+                                </ol>
+                                <div className="tech-stack">
+                                    <span>ASP.NET Core</span>
+                                    <span>C#</span>
+                                    <span>Angular</span>
+                                    <span>TypeScript</span>
+                                    <span>MySQL</span>
+                                    <span>REST API</span>
+                                    <span>Entity Framework</span>
+                                    <span>Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="experience-bottom">
+                    <div className="row mb-5">
+                        <div className="col-lg-12 text-center">
+                            <img
+                                src={experince_img}
+                                alt="Experience"
+                                className="experience-image w-100"
+                            />
+                        </div>
+                    </div>
+                    <div className="row g-4">
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-card years-card">
+                                <FaLaptopCode className="stats-icon" />
+
+                                <h2>
+                                    <CountUp end={3} duration={2} suffix="+" />
+                                </h2>
+
+                                <h5>Years Experience</h5>
+
+                                <p>
+                                    Building responsive, scalable, and user-friendly web applications.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-card project-card">
+                                <FaBriefcase className="stats-icon" />
+
+                                <h2>
+                                    <CountUp end={10} duration={2} suffix="+" />
+                                </h2>
+
+                                <h5>Projects Delivered</h5>
+
+                                <p>
+                                    Successfully completed enterprise and client-based applications.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-card tech-card">
+                                <FaCode className="stats-icon" />
+
+                                <h2>
+                                    <CountUp end={15} duration={2} suffix="+" />
+                                </h2>
+
+                                <h5>Technologies</h5>
+
+                                <p>
+                                    Experienced in modern frontend, backend, and database technologies.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-card commit-card">
+                                <FaAward className="stats-icon" />
+
+                                <h2>
+                                    <CountUp end={100} duration={2.5} suffix="%" />
+                                </h2>
+
+                                <h5>Commitment</h5>
+
+                                <p>
+                                    Focused on clean code, quality delivery, and continuous learning.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
-export default Experince;
+    );
+};
+
+export default Experience;

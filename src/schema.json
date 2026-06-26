@@ -22,15 +22,15 @@
     "about": {
         "type": "about",
         "content": {
-            "description": "I graduated with a Bachelor of Engineering in Electrical and Electronic Engineering from Anna University in 2020. I have 3.2 years of experience in front-end web development, having worked on over six UI and UX client projects, including e-commerce and medical websites, at my previous company. My skills include React.js, Node.js, jQuery, Java and Angular.",
+            "description": "I graduated with a Bachelor of Engineering in Electrical and Electronics Engineering from Anna University in 2020. I have over 3 years of professional experience in software development, specializing in Frontend and Full Stack Development. Throughout my career, I have contributed to enterprise and client-based projects across healthcare, ERP, and e-commerce domains. My expertise includes React.js, Angular, ASP.NET Core, C#, MySQL, JavaScript, TypeScript, HTML5, CSS3, SCSS, and Bootstrap. I have experience developing responsive web applications, designing RESTful APIs, integrating backend services, optimizing application performance, and collaborating with cross-functional teams in Agile environments. I am passionate about writing clean, maintainable code and continuously learning new technologies to build scalable and high-quality software solutions.",
             "data": {
-                "dob": "23 Dec-1999",
-                "phone_number": 9344368889,
-                "degree": "Bachelor of Engineering[B.E]",
-                "city": "Kanyakumari,TamilNadu",
-                "Email": "dheneshkumar111@gmail.com",
-                "freelance": "Available",
-                "age":""
+                "dob": "23 Dec 1999",
+                "age": 26,
+                "degree": "Bachelor of Engineering (Electrical and Electronics Engineering)",
+                "city": "Kanyakumari, Tamil Nadu, India",
+                "phoneNumber": "+91 9344368889",
+                "Email": "dinesh.matribal1@gmail.com",
+                "freelance": "Available"
             }
         }
     },
@@ -94,19 +94,7 @@
             {
                 "type": "primary",
                 "side": "back_end",
-                "skill": "PYTHON",
-                "percent": 54
-            },
-            {
-                "type": "primary",
-                "side": "back_end",
-                "skill": "C++",
-                "percent": 60
-            },
-            {
-                "type": "primary",
-                "side": "back_end",
-                "skill": "Java",
+                "skill": ".NET",
                 "percent": 60
             }
         ]

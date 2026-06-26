@@ -1,53 +1,58 @@
-.progress-container {
+.progress-wrapper {
     width: 100%;
-    margin: 20px 0;
-    font-family: "Poppins", sans-serif;
+    margin-top: 15px;
 }
 
-.progress-label {
+.progress-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.progress-bar {
+.progress-header span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.progress-header strong {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.progress-track {
     width: 100%;
-    height: 22px;
-    background: #e6e6e6;
-    border-radius: 12px;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 50px;
     overflow: hidden;
-    position: relative;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    border-radius: 12px;
-    transition: width 1.5s ease-in-out;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
     position: relative;
-    animation: glow 2s infinite ease-in-out;
+    overflow: hidden;
+    transition: width 1s ease;
 }
 
-/* Subtle glowing animation */
-@keyframes glow {
-    0%, 100% {
-        box-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+.progress-fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 40%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.45);
+    transform: skewX(-20deg);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    100% {
+        left: 120%;
     }
-    50% {
-        box-shadow: 0 0 20px #00c6ff, 0 0 40px #0072ff;
-    }
-}
-
-.skill-text {
-    font-size: 1rem;
-    color: #333;
-}
-
-.skill-percent {
-    font-size: 0.9rem;
-    color: #007bff;
 }

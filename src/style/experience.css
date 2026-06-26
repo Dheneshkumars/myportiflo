@@ -1,0 +1,449 @@
+/* ==========================================
+   EXPERIENCE SECTION - PART 1
+==========================================*/
+
+:root {
+    --primary: #2563eb;
+    --primary-light: #eff6ff;
+    --success: #16a34a;
+    --success-light: #ecfdf3;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+    --white: #fff;
+    --shadow: 0 10px 35px rgba(0, 0, 0, .08);
+    --transition: .35s ease;
+    --radius: 18px;
+}
+
+.experience-section {
+    background: linear-gradient(180deg, #fafcff 0%, #f4f8ff 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Circle */
+
+.experience-section::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, .05);
+    top: -120px;
+    right: -120px;
+}
+
+.experience-section::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, .05);
+    bottom: -120px;
+    left: -120px;
+}
+
+/* ==========================================
+    Heading
+==========================================*/
+
+.experience-subtitle {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section_heading {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+.experience-desc {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 70px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+    Timeline Layout
+==========================================*/
+
+/* ==========================================
+   Timeline Layout
+==========================================*/
+
+.timeline-wrapper{
+    position:relative;
+    width:100%;
+}
+
+.timeline-wrapper::before{
+    content:"";
+    position:absolute;
+    left:50px;
+    top:20px;
+    bottom:20px;
+    width:3px;
+    background:#dbeafe;
+}
+
+.timeline-item{
+    display:flex;
+    align-items:flex-start;
+    gap:35px;
+    margin-bottom:50px;
+    width:100%;
+}
+
+/* ==========================================
+   Timeline Left
+==========================================*/
+
+.timeline-left{
+    width:100px;
+    min-width:100px;
+    position:relative;
+    text-align:center;
+    flex-shrink:0;
+    z-index:2;
+}
+
+.timeline-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    color:#fff;
+    font-size:28px;
+    box-shadow:0 12px 30px rgba(37,99,235,.25);
+}
+
+.timeline-date{
+    margin-top:15px;
+    color:#2563eb;
+    font-size:17px;
+    font-weight:700;
+    line-height:1.4;
+}
+
+.timeline-duration{
+    font-size:14px;
+    color:#6b7280;
+    margin-top:8px;
+}
+
+/* Timeline Circle */
+
+.timeline-circle{
+    width:50px;
+    height:50px;
+    margin:0 auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    box-shadow:0 10px 30px rgba(37,99,235,.25);
+}
+
+.timeline-circle svg{
+    color:#fff;
+    font-size:30px;
+}
+
+/* Year */
+
+.timeline-year{
+    margin-top:18px;
+}
+
+.timeline-year h4{
+    margin:0;
+    font-size:24px;
+    font-weight:800;
+    color:#2563eb;
+}
+
+.timeline-year span{
+    display:block;
+    margin:6px 0;
+    color:#9ca3af;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* Duration */
+
+.timeline-left small{
+    display:inline-block;
+    margin-top:15px;
+    padding:6px 10px;
+    border-radius:20px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-size:13px;
+    font-weight:700;
+    border:1px solid #bfdbfe;
+}
+/* ==========================================
+   Experience Card
+==========================================*/
+
+.timeline-content{
+    flex:1;
+    width:calc(100% - 100px);
+}
+
+.experience-card{
+    width:100%;
+    min-height:100%;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+    border:1px solid #eef2ff;
+    transition:.35s;
+    position:relative;
+}
+
+.experience-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.experience-card::before{
+    content:"";
+    position:absolute;
+    left:-10px;
+    top:55px;
+    width:20px;
+    height:20px;
+    background:#fff;
+    transform:rotate(45deg);
+    border-left:1px solid #eef2ff;
+    border-bottom:1px solid #eef2ff;
+}
+/* ==========================================
+    Tech Stack
+==========================================*/
+
+.stats-card{
+    height: 200px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-radius:18px;
+    padding:30px;
+}
+
+.stats-card:hover{
+    transform:translateY(-8px);
+}
+
+/* Blue */
+.years-card{
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+}
+
+/* Green */
+.project-card{
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+}
+
+/* Orange */
+.tech-card{
+    background:linear-gradient(135deg,#ea580c,#fb923c);
+}
+
+/* Purple */
+.commit-card{
+    background:linear-gradient(135deg,#7c3aed,#a855f7);
+}
+
+.stats-card h2{
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.stats-card h5{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.stats-card p{
+    color:#fff;
+    opacity:.9;
+    margin:0;
+}
+
+/* ==========================================
+   Tech Stack
+==========================================*/
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.tech-stack span {
+    padding: 8px 16px;
+    background: #eef4ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all .3s ease;
+    cursor: default;
+}
+
+.tech-stack span:hover {
+    background: #2563eb;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+@media (max-width: 992px) {
+
+    .section_heading {
+        font-size: 36px;
+    }
+
+    .experience-desc {
+        font-size: 15px;
+        margin-bottom: 50px;
+        padding: 0 15px;
+    }
+
+    .timeline-wrapper::before {
+        left: 25px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .timeline-left {
+        width: 100%;
+        min-width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        text-align: left;
+    }
+
+    .timeline-circle {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .timeline-year {
+        margin-top: 0;
+    }
+
+    .timeline-year h4 {
+        font-size: 18px;
+    }
+
+    .timeline-left small {
+        margin-top: 0;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .experience-card {
+        padding: 25px;
+    }
+
+    .experience-card::before {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .experience-section {
+        padding: 50px 0;
+    }
+
+    .section_heading {
+        font-size: 28px;
+    }
+
+    .experience-desc {
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+
+    .timeline-wrapper::before {
+        display: none;
+    }
+
+    .timeline-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .timeline-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .timeline-year h4 {
+        font-size: 16px;
+    }
+
+    .timeline-duration,
+    .timeline-left small {
+        font-size: 12px;
+    }
+
+    .experience-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .tech-stack {
+        gap: 8px;
+    }
+
+    .tech-stack span {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

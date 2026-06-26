@@ -32,50 +32,75 @@ const About = () => {
     }
 
     return (
-        <section id='page_About' className='hide'>
-            <div className="container py-4">
-                <div className="about-parent row">
-                    <div className="about-child1 col-lg-4">
-                        <img src={about_image} alt='about' className='about_image' />
-                    </div>
-                    <div className="about-child2 col-lg-8">
-                        <h3 className='section_heading'>About</h3>
-                        <div className="line"></div>
-                        <div className="about-content">
-                            <p>{content?.description}</p>
-                            <div className="row">
-                                {/* Left Column */}
-                                <div className="col-lg-6">
-                                    <ul className="about-ul">
-                                        {left.map(([key, value], index) => (
-                                            <li key={index} className="about-list">
-                                                <SvgIcons  iconType={key} />
-                                                <strong>{formatKey(key)} :&nbsp;</strong>
-                                                <span> {key === "age" ? age : String(value)}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                {/* Right Column */}
-                                <div className="col-lg-6">
-                                    <ul className="about-ul">
-                                        {right.map(([key, value], index) => (
-                                            <li key={index} className="about-list">
-                                                <SvgIcons  iconType={key} />
-                                                <strong>{formatKey(key)} :&nbsp; </strong>
-                                                <span> {key === "age" ? age : String(value)}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
+        <section className="about-section" id="page_About">
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-lg-4 text-center">
+                        <div className="about-image-wrapper">
+                            <img
+                                src={about_image}
+                                alt="About"
+                                className="about-image"
+                            />
                         </div>
                     </div>
+
+                    {/* Right */}
+
+                    <div className="col-lg-8">
+
+                        <span className="about-subtitle">
+                            ABOUT ME
+                        </span>
+                        <p className="about-description">
+                            {content?.description}
+                        </p>
+
+                        <div className="row mt-4">
+
+                            {content?.data &&
+                                Object.entries(content.data).map(([key, value], index) => (
+
+                                    <div
+                                        className="col-md-6 mb-3"
+                                        key={index}
+                                    >
+
+                                        <div className="info-card">
+
+                                            <div className="info-icon">
+                                                <SvgIcons iconType={key} />
+                                            </div>
+
+                                            <div>
+
+                                                <h6>
+                                                    {formatKey(key)}
+                                                </h6>
+
+                                                <p>
+                                                    {key === "age"
+                                                        ? age
+                                                        : value}
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                ))}
+
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
+
         </section>
-    )
+    );
 }
 
 export default About;

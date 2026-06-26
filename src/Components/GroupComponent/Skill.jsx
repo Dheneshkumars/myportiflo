@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+
 import "swiper/css";
-import "swiper/css/pagination";
 
 import SvgIcon from "../BaseComponent/SvgIcons";
 import ProgressBar from "../BaseComponent/progressBar";
@@ -10,12 +10,13 @@ const Skill = ({ skillData }) => {
     const swiperSettings = {
         modules: [Autoplay],
         spaceBetween: 20,
+        loop: true,
         autoplay: {
-            delay: 3000,
+            delay: 2500,
             disableOnInteraction: false,
         },
         breakpoints: {
-            1024: {
+            1200: {
                 slidesPerView: 4,
             },
             768: {
@@ -27,45 +28,72 @@ const Skill = ({ skillData }) => {
         },
     };
 
-    const renderSkills = (side) =>
-        skillData?.type === "skill" &&
-        skillData?.content
-            ?.filter((data) => data.type === "primary" && data.side === side)
-            .map((data, index) => (
-                <SwiperSlide key={index}>
-                    <div className="skill-slide">
-                        <span>
-                            <SvgIcon iconType={data?.skill} />
-                        </span>
-                        <strong className="skill-name">{data?.skill}</strong>
-                        <ProgressBar
-                            percent={data?.percent}
-                            text={data?.skill}
-                        />
-                    </div>
-                </SwiperSlide>
-            ));
+    const sections = [
+        {
+            title: "Frontend Technologies",
+            side: "front_end",
+        },
+        {
+            title: "Backend Technologies",
+            side: "back_end",
+        },
+    ];
+
+    const getSkills = (side) =>
+        skillData?.content?.filter(
+            (item) =>
+                item.type === "primary" &&
+                item.side === side
+        );
 
     return (
-        <section id="page_Skills" className="hide">
+        <section className="skills-section" id="page_Skills">
+
             <div className="container">
-                <div className="skill-header">
-                    <h3>Skills</h3>
+
+                <div className="text-center mb-5">
+
+                    <span className="experience-subtitle">
+                        MY SKILLS
+                    </span>
+
+                    <h2 className="section_heading">
+                        Technical Skills
+                    </h2>
+
+                    <p className="experience-desc">
+                        Experienced in modern frontend and backend
+                        technologies for building responsive,
+                        scalable and enterprise-grade web applications.
+                    </p>
+
                 </div>
 
-                <div className="skill-body">
-                    <div className="skill-item">
-                        <h6 className="skill_primary"><b>Front End Skill</b></h6>
-                        <Swiper {...swiperSettings} className="skill-swiper my-4">
-                            {renderSkills("front_end")}
-                        </Swiper>
+                {sections.map((section) => (
+                    <div className="mb-5" key={section.side}>
+                        <h4 className="skill-category">
+                            {section.title}
+                        </h4>
+                        <Swiper
+                            {...swiperSettings}
+                            className="skill-swiper mt-4"
+                        >
+                            {getSkills(section.side)?.map((skill, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="skill-card">
+                                        <div className="skill-icon">
+                                            <SvgIcon iconType={skill.skill} />
+                                        </div>
 
-                        <h6 className="skill_primary mt-4"><b>Back End Skill</b></h6>
-                        <Swiper {...swiperSettings} className="skill-swiper my-4">
-                            {renderSkills("back_end")}
+                                        <h5 className="skill-name">
+                                            {skill.skill}
+                                        </h5>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
                         </Swiper>
                     </div>
-                </div>
+                ))}
             </div>
         </section>
     );

@@ -47,6 +47,42 @@ const SvgIcon = ({ iconType, onClickHandler, className, value, name }) => {
         case "Email":
             return <svg width="24" height="24" fill="#8A2BE2"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
             break;
+        case "phoneNumber":
+        case "Phone":
+        case "Phone Number":
+            return (
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#8A2BE2"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.6L5.79 8.8C5.38 7.59 5.11 6.31 5 5H6.54ZM16.4 17.02C17.24 17.26 18.11 17.41 19 17.46V19C17.69 18.89 16.41 18.62 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.5C21 15.95 20.55 15.5 20 15.5C18.76 15.5 17.55 15.3 16.43 14.93C16.33 14.89 16.22 14.88 16.12 14.88C15.86 14.88 15.61 14.98 15.41 15.17L13.21 17.37C10.38 15.93 8.07 13.62 6.63 10.79L8.83 8.59C9.11 8.31 9.19 7.91 9.07 7.57C8.7 6.45 8.5 5.24 8.5 4C8.5 3.45 8.05 3 7.5 3Z" />
+                </svg>
+            );
+            break;
+        case ".NET":
+            return (
+                <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="32" cy="32" r="30" fill="#512BD4" />
+                    <path
+                        d="M18 40
+                   Q26 18 34 40
+                   T50 24"
+                        fill="none"
+                        stroke="#fff"
+                        strokeWidth="6"
+                        strokeLinecap="round"
+                    />
+                </svg>
+            );
+            break;
         case "freelance":
             return <svg width="24" height="24" fill="#FF1493"><path d="M3 6h18v12H3V6zm0-2c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H3zm2 14h14v2H5v-2z" /></svg>
             break;

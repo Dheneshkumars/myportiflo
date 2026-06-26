@@ -9,6 +9,9 @@ import { schemaData } from "./Reducers/schemaReducer";
 function App() {
     const [loader, setLoader] = useState(true);
     const dispatch = useDispatch();
+    document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+    });
 
     useEffect(() => {
         const timer = setTimeout(() => {
