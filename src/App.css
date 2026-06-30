@@ -1098,10 +1098,55 @@ body.dark-mode .edu-row span {
 .menu_list {
     position: absolute;
     top: 100%;
-    left: 0%;
-    background-color: transparent;
-    backdrop-filter: blur(5px);
+    left: 0;
     width: 100%;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.16);
+    z-index: 1200;
+    color: #e2e8f0;
+    padding: 0.7rem 0.75rem 0.85rem;
+}
+
+.menu_list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.menu_list li.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.16);
+    border-radius: 14px;
+    transition: background 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.menu_list li.menu-item:hover {
+    background: rgba(56, 189, 248, 0.16);
+    transform: translateY(-1px);
+}
+
+.menu_list .menu-item-label {
+    color: #f8fafc;
+    font-weight: 600;
+    font-size: 0.96rem;
+    letter-spacing: 0.01em;
+}
+
+.menu_list .menu-item-icon {
+    margin-left: 0.75rem;
+    font-size: 1.2rem;
 }
 
 .about-section{

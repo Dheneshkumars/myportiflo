@@ -37,19 +37,17 @@ const NavMenu = ({
         windowDimensions.width < 768 &&
         <>
             <div className="d-md-none menu_list p-o">
-                <ul >
+                <ul>
                     {
                         Array.isArray(menuData) && menuData.length > 0 && menuData.map((data, i) => {
                             return (
-                                <li className="text-dark d-flex align-items-center justify-content-center my-2" onClick={() => handleClickHandler(data)} key={i}>
-                                    <span>{data}</span>
+                                <li className="d-flex align-items-center justify-content-between my-2 menu-item" onClick={() => handleClickHandler(data)} key={i}>
+                                    <span className="menu-item-label">{data}</span>
                                     <SvgIcon
                                         iconType={data}
-                                        className={"text-dark mx-2"}
+                                        className={"text-white mx-2 menu-item-icon"}
                                     />
                                 </li>
-
-
                             )
                         })
                     }
