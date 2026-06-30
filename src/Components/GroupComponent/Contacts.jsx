@@ -1,5 +1,6 @@
 ﻿import { useState, useEffect } from "react";
 import swal from "sweetalert";
+import { FaWhatsapp, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SendMail } from "../../Api/main";
 const Contact = () => {
 
@@ -89,8 +90,8 @@ const Contact = () => {
                             </div>
                             {isOnline ? (
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.1438579974685!2d77.43083291545968!3d8.175734893179149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0341a03f5f15b9%3A0x181005a8fe10382f!2sNagercoil%2C%20Tamil%20Nadu%20629901!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
-                                    title="Nagercoil location"
+                                    src="https://www.google.com/maps?q=Eathamozhi,+Nagercoil,+Kanyakumari+District,+Tamil+Nadu&output=embed"
+                                    title="Eathamozhi location"
                                     className="map_view"
                                     allowFullScreen={true}
                                     loading="lazy"
@@ -98,8 +99,7 @@ const Contact = () => {
                                 />
                             ) : (
                                 <div className="offline-location">
-                                    <h4>Offline Available</h4>
-                                    <p>Nagercoil, Tamil Nadu</p>
+                                    <p>Eathamozhi,Nagercoil, Tamil Nadu</p>
                                     <p>Zipcode: <strong>629501</strong></p>
                                 </div>
                             )}
@@ -109,13 +109,24 @@ const Contact = () => {
                                     <strong>Nagercoil</strong>
                                 </div>
                                 <div>
-                                    <p className="detail-label">Zipcode</p>
-                                    <strong>629501</strong>
+                                    <p className="detail-label">Location</p>
+                                    <strong>Eathamozhi</strong>
                                 </div>
                                 <div>
                                     <p className="detail-label">Country</p>
                                     <strong>India</strong>
                                 </div>
+                            </div>
+                            <div className="footer-social-links footer-social-links-map">
+                                <a href="https://wa.me/919344368889" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                                    <span className="social-icon whatsapp"><FaWhatsapp /> WhatsApp</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/dhenesh-kumar-s-626b68291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                                    <span className="social-icon linkedin"><FaLinkedin /> LinkedIn</span>
+                                </a>
+                                <a href="https://www.instagram.com/dhenesh___s" target="_blank" rel="noreferrer" aria-label="Instagram">
+                                    <span className="social-icon instagram"><FaInstagram /> Instagram</span>
+                                </a>
                             </div>
                         </div>
                         <div className="contact-form-card">

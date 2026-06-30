@@ -778,6 +778,59 @@ body.dark-mode .edu-row span {
     margin-bottom: 18px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 16px;
+}
+
+.footer-social-links-map {
+    margin-top: 18px;
+    justify-content: center;
+}
+
+.footer-social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #f8fafc;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-social-links a:hover {
+    transform: translateY(-1px);
+}
+
+.footer-social-links .social-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.footer-social-links .whatsapp {
+    background: rgba(37, 211, 102, 0.14);
+    color: #a7f3d0;
+}
+
+.footer-social-links .linkedin {
+    background: rgba(59, 130, 246, 0.14);
+    color: #bfdbfe;
+}
+
+.footer-social-links .github,
+.footer-social-links .instagram {
+    background: rgba(236, 72, 153, 0.14);
+    color: #f9a8d4;
 }
 
 .section-label {
@@ -914,6 +967,11 @@ body.dark-mode .edu-row span {
     height: 210px;
     border: none;
     border-radius: 18px;
+    cursor: pointer;
+}
+
+.contact-map-card {
+    cursor: default;
 }
 
 @media (max-width: 991px) {
