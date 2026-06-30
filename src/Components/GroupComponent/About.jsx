@@ -34,7 +34,7 @@ const About = () => {
     return (
         <section className="about-section" id="page_About">
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-start">
                     <div className="col-lg-4 text-center">
                         <div className="about-image-wrapper">
                             <img
@@ -45,8 +45,6 @@ const About = () => {
                         </div>
                     </div>
 
-                    {/* Right */}
-
                     <div className="col-lg-8">
 
                         <span className="about-subtitle">
@@ -55,47 +53,33 @@ const About = () => {
                         <p className="about-description">
                             {content?.description}
                         </p>
-
-                        <div className="row mt-4">
-
-                            {content?.data &&
-                                Object.entries(content.data).map(([key, value], index) => (
-
-                                    <div
-                                        className="col-md-6 mb-3"
-                                        key={index}
-                                    >
-
-                                        <div className="info-card">
-
-                                            <div className="info-icon">
-                                                <SvgIcons iconType={key} />
-                                            </div>
-
-                                            <div>
-
-                                                <h6>
-                                                    {formatKey(key)}
-                                                </h6>
-
-                                                <p>
-                                                    {key === "age"
-                                                        ? age
-                                                        : value}
-                                                </p>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                ))}
-
-                        </div>
-
                     </div>
 
+                </div>
+                <div className="row mt-4">
+                    {content?.data &&
+                        Object.entries(content.data).map(([key, value], index) => (
+                            <div
+                                className="col-md-4 mb-3"
+                                key={index}
+                            >
+                                <div className="info-card">
+                                    <div className="info-icon">
+                                        <SvgIcons iconType={key} />
+                                    </div>
+                                    <div>
+                                        <h6>
+                                            {formatKey(key)}
+                                        </h6>
+                                        <p>
+                                            {key === "age"
+                                                ? age
+                                                : value}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
 

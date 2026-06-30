@@ -82,6 +82,24 @@
             {
                 "type": "primary",
                 "side": "back_end",
+                "skill": ".NET",
+                "percent": 74
+            },
+            {
+                "type": "primary",
+                "side": "back_end",
+                "skill": "MYSQL",
+                "percent": 60
+            },
+            {
+                "type": "primary",
+                "side": "back_end",
+                "skill": "Python",
+                "percent": 60
+            },
+            {
+                "type": "primary",
+                "side": "back_end",
                 "skill": "Node JS",
                 "percent": 68
             },
@@ -90,12 +108,6 @@
                 "side": "back_end",
                 "skill": "Express JS",
                 "percent": 63
-            },
-            {
-                "type": "primary",
-                "side": "back_end",
-                "skill": ".NET",
-                "percent": 60
             }
         ]
     },

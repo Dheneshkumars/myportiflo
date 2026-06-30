@@ -19,26 +19,20 @@ const Home = () => {
                                 <li><span>App Developer</span></li>
                             </ul>
                         </div>
-                        <p className='text-light'>I am a professional Full Stack Developer and App developer.</p>
-                        <span>
-                            <a href="https://github.com/Dheneshkumars" target="_blank" rel="noopener noreferrer">
-                                <SvgIcon
-                                    iconType={'git'}
-                                />
+                        <div className="home_links">
+                            <a className="home-btn home-btn-git" href="https://github.com/Dheneshkumars" target="_blank" rel="noopener noreferrer">
+                                <SvgIcon iconType={'git'} />
+                                <span>GitHub</span>
                             </a>
-                        </span>
-                        <span>
-                            <a href="https://www.linkedin.com/in/dhenesh-kumar-s-626b68291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-                                <SvgIcon
-                                    iconType={'linkdin'}
-                                />
+                            <a className="home-btn home-btn-linkedin" href="https://www.linkedin.com/in/dhenesh-kumar-s-626b68291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+                                <SvgIcon iconType={'linkdin'} />
+                                <span>LinkedIn</span>
                             </a>
-                        </span>
-                        <span>
-                            <b>
-                                <a href={resume} style={{ color: "white",textDecoration:'none' }} download={'Dhenesh_kumar_resume'}><SvgIcon iconType={"resume"} /></a>
-                            </b>
-                        </span>
+                            <a className="home-btn home-btn-resume" href={resume} download={'Dhenesh_kumar_resume'}>
+                                <SvgIcon iconType={"resume"} />
+                                <span>Resume</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

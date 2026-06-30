@@ -19,6 +19,21 @@ class AppComponent extends PureComponent {
         };
         this.elementsToObserve = null;
         this.observer = null;
+        this.mutationObserver = null;
+        this._onScroll = null;
+        this._onResize = null;
+        this._onLoad = null;
+    }
+
+    componentWillUnmount() {
+        try {
+            if (this.observer) { this.observer.disconnect(); this.observer = null; }
+            if (this.mutationObserver) { this.mutationObserver.disconnect(); this.mutationObserver = null; }
+            if (this._onScroll) { document.removeEventListener('scroll', this._onScroll); }
+            if (this._onResize) { window.removeEventListener('resize', this._onResize); }
+            if (this._onLoad) { window.removeEventListener('load', this._onLoad); }
+            if (this.headerScrollHandler) { window.removeEventListener('scroll', this.headerScrollHandler); }
+        } catch (e) { }
     }
 
     static getDerivedStateFromError(error) {
@@ -33,7 +48,7 @@ class AppComponent extends PureComponent {
 
     componentDidMount() {
         const currentUrl = window.location.hash.substring(1);
-        if (currentUrl !== undefined && currentUrl !== null) {
+        if (currentUrl) {
             scroller.scrollTo(`page_${currentUrl}`, {
                 duration: 300,
                 delay: 0,
@@ -45,7 +60,8 @@ class AppComponent extends PureComponent {
         const container = document.getElementsByTagName('section');
         const customOffset = 300;
 
-        const onScrollHandle = () => {
+        // active page logic (saved for cleanup)
+        this._onScroll = () => {
             for (let section of container) {
                 const id = section && section.id;
                 if (id) {
@@ -65,39 +81,83 @@ class AppComponent extends PureComponent {
         };
 
         if (container.length > 0) {
-            document.addEventListener('scroll', onScrollHandle);
+            document.addEventListener('scroll', this._onScroll, { passive: true });
         }
-        //  scroll animation
-        this.elementsToObserve = document.querySelectorAll('.hide');
-        this.observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    this.observer.unobserve(entry.target);
-                }
-                else {
-                    entry.target.classList.remove('show');
-                }
-            })
-        },
-            {
-                // threshold: 1
-            }
-        )
-        this.elementsToObserve.forEach((element) => {
-            this.observer.observe(element);
-        });
 
-        const header = document.querySelector('header');
-        window.addEventListener("scroll", () => {
-            if (header) {
-                if (window.scrollY > 0) {
-                    header.style.backgroundColor = "#fff";
-                } else {
-                    header.style.backgroundColor = "transparent";
+        // reveal observer setup with immediate viewport fallback and stagger
+        const baseDelay = 80; // ms between items for stagger
+
+        const createObserver = () => {
+            if (this.observer) return;
+            this.observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        try { this.observer.unobserve(entry.target); } catch (e) { }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -120px 0px',
+                threshold: 0.12
+            });
+        };
+
+        this.observeHiddenElements = () => {
+            const elements = document.querySelectorAll('.hide');
+            if (!elements || elements.length === 0) return;
+
+            createObserver();
+
+            Array.from(elements).forEach((el, idx) => {
+                const dataDelay = el.dataset && el.dataset.delay ? parseInt(el.dataset.delay, 10) : null;
+                const delay = (dataDelay !== null && !isNaN(dataDelay)) ? dataDelay : (idx * baseDelay);
+                try { el.style.transitionDelay = `${delay}ms`; } catch (e) { }
+
+                // child staggering
+                if (el.dataset && el.dataset.stagger === 'children') {
+                    const children = Array.from(el.children || []);
+                    children.forEach((child, cidx) => {
+                        const childDelay = delay + (cidx * baseDelay);
+                        try { child.style.transitionDelay = `${childDelay}ms`; } catch (e) { }
+                    });
                 }
-            }
-        });
+
+                // immediate visibility fallback: if element already in viewport, reveal immediately
+                const rect = el.getBoundingClientRect();
+                const inViewport = rect.top < (window.innerHeight - 40) && rect.bottom > 0;
+                if (inViewport) {
+                    el.classList.add('show');
+                } else {
+                    try { this.observer.observe(el); } catch (e) { }
+                }
+            });
+        };
+
+        // initial observe pass + follow-up for late content
+        this.observeHiddenElements();
+        setTimeout(() => this.observeHiddenElements(), 220);
+
+        // MutationObserver to catch dynamically added elements
+        this.mutationObserver = new MutationObserver(() => this.observeHiddenElements());
+        this.mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+        // ensure we re-run on resize/load
+        this._onResize = () => this.observeHiddenElements();
+        this._onLoad = () => this.observeHiddenElements();
+        window.addEventListener('resize', this._onResize, { passive: true });
+        window.addEventListener('load', this._onLoad);
+
+        // header scroll state toggle saved so it can be removed later
+        const header = document.querySelector('header');
+        this.headerScrollHandler = () => {
+            if (!header) return;
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        };
+        if (header) {
+            this.headerScrollHandler();
+        }
+        window.addEventListener("scroll", this.headerScrollHandler, { passive: true });
     }
 
 

@@ -32,23 +32,10 @@ const Header = (
             })
         }
     }
-    const onColorChange = (e) => {
+    const onColorChange = () => {
         const body = document.body;
-        const para = document.querySelectorAll('p');
-        if (color === 'light') {
-            body.style.backgroundColor = 'black';
-            setColor('dark');
-            para.forEach(data => {
-                data.style.color = 'white';
-            })
-        }
-        else {
-            body.style.backgroundColor = 'white';
-            setColor('light');
-            para.forEach(data => {
-                data.style.color = 'black';
-            })
-        }
+        const isDark = body.classList.toggle('dark-mode');
+        setColor(isDark ? 'dark' : 'light');
     }
     const menuOpneHandler = (e) => {
         const nameValue = e.target.getAttribute('name');
@@ -90,7 +77,7 @@ const Header = (
                                             <li className={`nav-item`} key={index} onClick={() => handleOnclick(data)}>
                                                 <a
                                                     className={`nav-link px-lg-4  ${activeInfo.toLowerCase() == data.toLowerCase() ? "higlight" : ""}`}
-                                                    href={`#${activeInfo}`}
+                                                    href={`#${data}`}
                                                     name={data}
                                                 >
                                                     {data}
@@ -101,14 +88,14 @@ const Header = (
                                 }
                             </ul>
                         </div>
-                        <div className='d-md-none'>
+                        <div className='d-flex align-items-center'>
                             <SvgIcon
                                 iconType={`${color == 'dark' ? 'light' : 'dark'}`}
-                                className={'text-dark'}
+                                className={color === 'dark' ? 'text-light' : 'text-dark'}
                                 onClickHandler={(e) => onColorChange(e)}
                                 value={color}
                             />
-                            <span className='px-1'>
+                            <span className='px-1 d-md-none'>
                                 <SvgIcon
                                     iconType={(open && open_menu) ? 'close' : 'menu'}
                                     name={(open) ? 'close' : 'menu'}

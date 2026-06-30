@@ -94,67 +94,34 @@
 .timeline-wrapper::before{
     content:"";
     position:absolute;
-    left:50px;
+    left:140px;
     top:20px;
     bottom:20px;
-    width:3px;
-    background:#dbeafe;
+    width:4px;
+    background:linear-gradient(180deg, rgba(37,99,235,0.16) 0%, rgba(37,99,235,0.04) 100%);
 }
 
 .timeline-item{
     display:flex;
     align-items:flex-start;
     gap:35px;
-    margin-bottom:50px;
+    margin-bottom:60px;
     width:100%;
 }
 
-/* ==========================================
-   Timeline Left
-==========================================*/
-
 .timeline-left{
-    width:100px;
-    min-width:100px;
+    width:160px;
+    min-width:160px;
     position:relative;
     text-align:center;
     flex-shrink:0;
     z-index:2;
+    padding-top: 12px;
 }
-
-.timeline-icon{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#2563eb,#3b82f6);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:auto;
-    color:#fff;
-    font-size:28px;
-    box-shadow:0 12px 30px rgba(37,99,235,.25);
-}
-
-.timeline-date{
-    margin-top:15px;
-    color:#2563eb;
-    font-size:17px;
-    font-weight:700;
-    line-height:1.4;
-}
-
-.timeline-duration{
-    font-size:14px;
-    color:#6b7280;
-    margin-top:8px;
-}
-
-/* Timeline Circle */
 
 .timeline-circle{
-    width:50px;
-    height:50px;
+    width:60px;
+    height:60px;
     margin:0 auto;
     border-radius:50%;
     background:linear-gradient(135deg,#2563eb,#3b82f6);
@@ -162,88 +129,176 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:13px;
-    box-shadow:0 10px 30px rgba(37,99,235,.25);
+    font-size:18px;
+    box-shadow:0 18px 42px rgba(37,99,235,.22);
 }
 
 .timeline-circle svg{
     color:#fff;
-    font-size:30px;
+    font-size:28px;
 }
 
-/* Year */
-
 .timeline-year{
-    margin-top:18px;
+    margin-top:20px;
+    background: rgba(37,99,235,0.08);
+    border-radius: 18px;
+    padding: 14px 12px;
 }
 
 .timeline-year h4{
     margin:0;
-    font-size:24px;
+    font-size:22px;
     font-weight:800;
-    color:#2563eb;
+    color:#0f172a;
 }
 
 .timeline-year span{
     display:block;
-    margin:6px 0;
-    color:#9ca3af;
-    font-size:14px;
+    margin:8px 0;
+    color:#475569;
+    font-size:13px;
     font-weight:600;
     text-transform:uppercase;
     letter-spacing:1px;
 }
 
-/* Duration */
-
 .timeline-left small{
-    display:inline-block;
-    margin-top:15px;
-    padding:6px 10px;
-    border-radius:20px;
+    display:inline-flex;
+    margin-top:18px;
+    padding:10px 14px;
+    border-radius:999px;
     background:#eff6ff;
     color:#2563eb;
     font-size:13px;
     font-weight:700;
     border:1px solid #bfdbfe;
 }
-/* ==========================================
-   Experience Card
-==========================================*/
 
 .timeline-content{
     flex:1;
-    width:calc(100% - 100px);
+    width:calc(100% - 160px);
 }
 
 .experience-card{
     width:100%;
     min-height:100%;
-    background:#fff;
-    border-radius:20px;
-    padding:35px;
-    box-shadow:0 15px 45px rgba(0,0,0,.08);
-    border:1px solid #eef2ff;
-    transition:.35s;
+    background:#ffffff;
+    border-radius:28px;
+    padding:36px 38px;
+    box-shadow:0 30px 80px rgba(15,23,42,.08);
+    border:1px solid rgba(15,23,42,.06);
+    transition:transform .35s ease, box-shadow .35s ease;
     position:relative;
 }
 
 .experience-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 25px 60px rgba(0,0,0,.12);
+    transform:translateY(-10px);
+    box-shadow:0 35px 100px rgba(15,23,42,.14);
 }
 
 .experience-card::before{
     content:"";
     position:absolute;
-    left:-10px;
-    top:55px;
-    width:20px;
-    height:20px;
-    background:#fff;
+    left:-12px;
+    top:48px;
+    width:24px;
+    height:24px;
+    background:#ffffff;
     transform:rotate(45deg);
-    border-left:1px solid #eef2ff;
-    border-bottom:1px solid #eef2ff;
+    border-left:1px solid rgba(15,23,42,.06);
+    border-bottom:1px solid rgba(15,23,42,.06);
+}
+
+.card-header-custom{
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    align-items:flex-start;
+    margin-bottom:28px;
+    flex-wrap:wrap;
+}
+
+.job-title{
+    font-size:1.45rem;
+    margin-bottom:8px;
+    color:#0f172a;
+}
+
+.company-name{
+    color:#475569;
+    font-weight:600;
+    margin:0;
+}
+
+.experience-date{
+    color:#2563eb;
+    font-weight:700;
+    font-size:0.95rem;
+    white-space:nowrap;
+}
+
+.experience-list{
+    padding-left:22px;
+    margin:0;
+    color:#475569;
+    line-height:1.85;
+}
+
+.experience-list li{
+    margin-bottom:14px;
+    position:relative;
+    padding-left:14px;
+}
+
+.experience-list li::before{
+    content:'\2022';
+    position:absolute;
+    left:0;
+    top:2px;
+    color:#2563eb;
+    font-size:16px;
+    line-height:1;
+}
+
+.tech-stack {
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:28px;
+}
+
+.tech-stack span {
+    padding:10px 16px;
+    background:#eff6ff;
+    color:#2563eb;
+    border:1px solid #dbeafe;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.experience-footer{
+    margin-top:24px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.project-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.project-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 26px rgba(37,99,235,.24);
 }
 /* ==========================================
     Tech Stack

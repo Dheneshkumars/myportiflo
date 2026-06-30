@@ -78,9 +78,6 @@ const Experience = () => {
                 <div className="timeline-wrapper">
                     <div className="timeline-item"> <div className="timeline-left">
                         <div className="timeline-line"></div>
-                        <div className="timeline-circle">
-                            <FaLaptopCode />
-                        </div>
                         <div className="timeline-year">
                             <h4>2021</h4>
                             <span>to</span>
@@ -139,9 +136,6 @@ const Experience = () => {
                     <div className="timeline-item">
                         <div className="timeline-left">
                             <div className="timeline-line"></div>
-                            <div className="timeline-circle">
-                                <FaCode />
-                            </div>
                             <div className="timeline-year">
                                 <h4>2025</h4>
                                 <span>to</span>

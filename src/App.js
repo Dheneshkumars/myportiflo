@@ -8,10 +8,20 @@ import { schemaData } from "./Reducers/schemaReducer";
 
 function App() {
     const [loader, setLoader] = useState(true);
+    const [showScrollTop, setShowScrollTop] = useState(false);
     const dispatch = useDispatch();
-    document.addEventListener("contextmenu", (e) => {
-        e.preventDefault();
-    });
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -24,6 +34,14 @@ function App() {
         return () => clearTimeout(timer);
     }, [dispatch]);
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+    });
+
     return (
         <div className="App">
             {loader ? (
@@ -31,7 +49,14 @@ function App() {
                     <img src={preloader} alt="Loading..." />
                 </div>
             ) : (
-                <AppComponent schema={schema} />
+                <>
+                    <AppComponent schema={schema} />
+                    {showScrollTop && (
+                        <button className="scroll-top" onClick={scrollToTop} aria-label="Scroll to top">
+                            ↑
+                        </button>
+                    )}
+                </>
             )}
         </div>
     );
