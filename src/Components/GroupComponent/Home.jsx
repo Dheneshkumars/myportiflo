@@ -1,37 +1,66 @@
-import flaight from '../../images/flaight.png';
+import heroImage from '../../images/home.jpg';
+import flightImage from '../../images/flaight.png';
 import SvgIcon from '../BaseComponent/SvgIcons';
 import resume from '../../Files/Dhenesh_Kumar_Resume.pdf';
 const Home = () => {
 
+    const techBadges = [
+        { icon: 'HTML', label: 'HTML' },
+        { icon: 'CSS', label: 'CSS' },
+        { icon: 'JAVASCRIPT', label: 'JS' },
+        { icon: 'ANGULAR', label: 'Angular' },
+        { icon: 'DOTNET', label: '.NET' },
+        { icon: 'REACT', label: 'React' }
+    ];
+
     return (
         <section id='page_Home' className="hide">
-            <div className="bird_one bird">
-                <img src={flaight} alt="flaight" width={100} />
-            </div>
             <div className="container">
-                <div className="row">
-                    <div className="home_content">
-                        <h3 className='text-light'>Hi, It's Me,</h3>
-                        <div className="wrapper">
-                            <h2 className='text-light'>I am a,</h2>
-                            <ul className="dyamic_text ms-1 p-0">
-                                <li><span>Full Stack Developer</span></li>
-                                <li><span>App Developer</span></li>
-                            </ul>
+                <div className="home_flight">
+                    <img src={flightImage} alt="Flying plane" />
+                </div>
+                <div className="home_inner">
+                    <div className="home_left">
+                        <span className="home_label">FULL STACK DEVELOPER</span>
+                        <h1>
+                            I Build.
+                            <span>Create Experiences.</span>
+                        </h1>
+                        <p className="home_desc">
+                            Full Stack Developer with passion for clean code, creative animation, and delightful user experiences.
+                        </p>
+                        <div className="home_actions">
+                            <a className="home_btn home_btn_primary" href="#page_Skills">View My Work</a>
+                            <a className="home_btn home_btn_secondary" href={resume} download={'Dhenesh_kumar_resume'}>Download CV</a>
                         </div>
-                        <div className="home_links">
-                            <a className="home-btn home-btn-git" href="https://github.com/Dheneshkumars" target="_blank" rel="noopener noreferrer">
-                                <SvgIcon iconType={'git'} />
-                                <span>GitHub</span>
-                            </a>
-                            <a className="home-btn home-btn-linkedin" href="https://www.linkedin.com/in/dhenesh-kumar-s-626b68291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-                                <SvgIcon iconType={'linkdin'} />
-                                <span>LinkedIn</span>
-                            </a>
-                            <a className="home-btn home-btn-resume" href={resume} download={'Dhenesh_kumar_resume'}>
-                                <SvgIcon iconType={"resume"} />
-                                <span>Resume</span>
-                            </a>
+                        <div className="home_badges">
+                            {techBadges.map((item) => (
+                                <span className="home_badge_item" key={item.label}>
+                                    <SvgIcon iconType={item.icon} className="badge-icon" width={20} height={20} />
+                                    <span>{item.label}</span>
+                                </span>
+                            ))}
+                        </div>
+                        <div className="home_code_block">
+                            <div className="code_header">
+                                <span className="code_dot code_dot_red"></span>
+                                <span className="code_dot code_dot_yellow"></span>
+                                <span className="code_dot code_dot_green"></span>
+                            </div>
+                            <pre>
+                                <code>
+                                    {`const developer = {
+  code: true,
+  design: true,
+  animate: true
+};`}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div className="home_right">
+                        <div className="hero_image_wrapper">
+                            <img src={heroImage} alt="Developer illustration" className="hero_image" />
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import SvgIcon from '../BaseComponent/SvgIcons';
 import { useEffect, useState } from 'react';
 import NavMenu from '../BaseComponent/NavBarMenu';
 import { menuOpen } from "../../Reducers/pageReducer";
+import logoImage from '../../images/logo.png';
 
 const Header = (
     {
@@ -57,16 +58,19 @@ const Header = (
             <header>
                 <nav className="navbar navbar-expand-md">
                     <div className="container navbar_sticky">
-                        <a className="logo" href="#">
-                            <p className='three_d m-0'>
-                                <span className="letter text-danger">D</span>
-                                <span className="letter text-success">H</span>
-                                <span className="letter text-primary">E</span>
-                                <span className="letter text-warning">N</span>
-                                <span className="letter text-info">E</span>
-                                <span className="letter text-orange">S</span>
-                                <span className="letter text-sky">H</span>
-                            </p>
+                        <a className="logo d-flex align-items-center" href="#">
+                            <img src={logoImage} alt="Dhenesh logo" className="brand-icon" />
+                            <div className="logo-text">
+                                <p className='three_d m-0'>
+                                    <span className="letter text-danger">D</span>
+                                    <span className="letter text-success">H</span>
+                                    <span className="letter text-primary">E</span>
+                                    <span className="letter text-warning">N</span>
+                                    <span className="letter text-info">E</span>
+                                    <span className="letter text-orange">S</span>
+                                    <span className="letter text-sky">H</span>
+                                </p>
+                            </div>
                         </a>
                         <div className="nav-menu" id="navbarNav">
                             <ul className="navbar-nav ml-auto">
@@ -88,7 +92,7 @@ const Header = (
                                 }
                             </ul>
                         </div>
-                        <div className='d-flex align-items-center'>
+                        <div className='header-actions d-flex align-items-center d-md-none'>
                             <SvgIcon
                                 iconType={`${color == 'dark' ? 'light' : 'dark'}`}
                                 className={color === 'dark' ? 'text-light' : 'text-dark'}

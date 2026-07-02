@@ -80,6 +80,12 @@
                 "percent": 87
             },
             {
+                "type":"primary",
+                "side":"front_end",
+                "skill":"ANGULAR",
+                "percent": 70
+            },
+            {
                 "type": "primary",
                 "side": "back_end",
                 "skill": ".NET",
