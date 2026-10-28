@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/myportiflo/static/css/main.dbd5665c.css",
-    "main.js": "/myportiflo/static/js/main.5f134264.js",
+    "main.css": "/myportiflo/static/css/main.acfd7682.css",
+    "main.js": "/myportiflo/static/js/main.de3df144.js",
     "static/media/experience.png": "/myportiflo/static/media/experience.b09297fe914dab745cc8.png",
     "static/media/loader.gif": "/myportiflo/static/media/loader.e117460d7187ddaa81e6.gif",
     "static/media/flaight.png": "/myportiflo/static/media/flaight.dbdffcf7fb039b9dc47b.png",
@@ -12,11 +12,11 @@
     "static/media/education.jpg": "/myportiflo/static/media/education.aae0d4dc2b545e4a5d2b.jpg",
     "static/media/logo.png": "/myportiflo/static/media/logo.9dc3487c3d24e8ce8207.png",
     "index.html": "/myportiflo/index.html",
-    "main.dbd5665c.css.map": "/myportiflo/static/css/main.dbd5665c.css.map",
-    "main.5f134264.js.map": "/myportiflo/static/js/main.5f134264.js.map"
+    "main.acfd7682.css.map": "/myportiflo/static/css/main.acfd7682.css.map",
+    "main.de3df144.js.map": "/myportiflo/static/js/main.de3df144.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbd5665c.css",
-    "static/js/main.5f134264.js"
+    "static/css/main.acfd7682.css",
+    "static/js/main.de3df144.js"
   ]
 }
