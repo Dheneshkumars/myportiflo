@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/myportiflo/static/css/main.dbd5665c.css",
-    "main.js": "/myportiflo/static/js/main.c5b01ef4.js",
-    "static/media/About_image.png": "/myportiflo/static/media/About_image.62284f36175c660e51aa.png",
+    "main.js": "/myportiflo/static/js/main.5f134264.js",
     "static/media/experience.png": "/myportiflo/static/media/experience.b09297fe914dab745cc8.png",
     "static/media/loader.gif": "/myportiflo/static/media/loader.e117460d7187ddaa81e6.gif",
     "static/media/flaight.png": "/myportiflo/static/media/flaight.dbdffcf7fb039b9dc47b.png",
     "static/media/home.jpg": "/myportiflo/static/media/home.1f38faf50db01b47a10a.jpg",
     "static/media/sky.webp": "/myportiflo/static/media/sky.5ecfc946a8a060f89ea9.webp",
+    "static/media/About_image.jpg": "/myportiflo/static/media/About_image.b6912218d3afe5c6490b.jpg",
+    "static/media/Dhenesh_Kumar_Resume.pdf": "/myportiflo/static/media/Dhenesh_Kumar_Resume.6a879de9c6485148cc15.pdf",
     "static/media/education.jpg": "/myportiflo/static/media/education.aae0d4dc2b545e4a5d2b.jpg",
-    "static/media/Dhenesh_Kumar_Resume.pdf": "/myportiflo/static/media/Dhenesh_Kumar_Resume.32fa94fe1ce93c954069.pdf",
     "static/media/logo.png": "/myportiflo/static/media/logo.9dc3487c3d24e8ce8207.png",
     "index.html": "/myportiflo/index.html",
     "main.dbd5665c.css.map": "/myportiflo/static/css/main.dbd5665c.css.map",
-    "main.c5b01ef4.js.map": "/myportiflo/static/js/main.c5b01ef4.js.map"
+    "main.5f134264.js.map": "/myportiflo/static/js/main.5f134264.js.map"
   },
   "entrypoints": [
     "static/css/main.dbd5665c.css",
-    "static/js/main.c5b01ef4.js"
+    "static/js/main.5f134264.js"
   ]
 }
